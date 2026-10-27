@@ -1,480 +1,1186 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us — Nash Tax</title>
-  <link rel="icon" type="image/png" href="assests/img/llogo1.png">
 
-    <!-- Google tag (gtag.js) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact Us | Nash Tax & Bookkeeping</title>
+  <meta name="description" content="Contact Nash Tax & Bookkeeping for individual tax, business tax, bookkeeping, payroll, business formation and tax planning services.">
+  <link rel="canonical" href="https://www.nashtaxes.com/contact.html">
+  <link rel="icon" href="assests/img/llogo1.png" type="image/png">
+  <link rel="stylesheet" href="assests/css/scroll-animation.css">
+
+  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956738872"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17956738872');
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "AW-17956738872");
   </script>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome (ONLY ONCE) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Shared CSS -->
-  <link rel="stylesheet" href="assests/css/style.css" />
-  <link rel="stylesheet" href="assests/css/navbar.css" />
+  <!-- Existing shared styles -->
+  <link rel="stylesheet" href="assests/css/style.css">
+  <link rel="stylesheet" href="assests/css/navbar.css">
+  <link rel="stylesheet" href="assests/css/footer.css">
 
   <style>
-    :root{
-      --font-nav: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      --font-display: "Playfair Display", serif;
-
-      --bg:#ffffff;
-      --text:#0b1220;
-      --muted:#6b7280;
-
-      --gold:#b08d2f;
-      --gold2:#d8b556;
-
-      --border: rgba(15,23,42,.12);
-      --shadowSoft: 0 14px 38px rgba(2,6,23,.10);
-
-      --r16:16px;
-      --r22:22px;
-      --max: 1200px;
-
-      --navH: 82px;
+    :root {
+      --ct-gold: #c9a227;
+      --ct-gold-dark: #a98216;
+      --ct-gold-light: #f8ebc2;
+      --ct-black: #101010;
+      --ct-white: #ffffff;
+      --ct-cream: #fffdf7;
+      --ct-muted: #68645d;
+      --ct-serif: "Playfair Display", Georgia, serif;
+      --ct-sans: "Inter", Arial, sans-serif;
     }
 
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:var(--font-body); }
-    a{ color:inherit; text-decoration:none; }
-    img{ max-width:100%; display:block; }
-    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
-
-    /* Navbar always visible */
-    #navbarMount{
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      z-index: 9999;
+    html {
+      scroll-behavior: smooth;
     }
-    body{ padding-top: var(--navH); }
 
-    /* Hero */
-    .hero{
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .ct-page,
+    .ct-page * {
+      box-sizing: border-box;
+    }
+
+    .ct-page {
+      font-family: var(--ct-sans);
+      color: var(--ct-black);
+    }
+
+    .ct-container {
+      width: min(1320px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* ======================================
+       PREMIUM CONTACT HERO
+    ====================================== */
+
+    .ct-hero {
       position: relative;
-      min-height: 320px;
-      display:flex;
-      align-items:center;
-      overflow:hidden;
-      background:#0b1220;
-    }
-    .hero__bg{
-      position:absolute;
-      inset:0;
-      background: url("assests/img/aa.jpg") center/cover no-repeat;
-      transform: scale(1.03);
-      filter: saturate(1.02) contrast(1.02);
-    }
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
+      overflow: hidden;
+      text-align: center;
+      padding: 105px 20px 85px;
       background:
-        radial-gradient(900px 380px at 20% 30%, rgba(0,0,0,.25), rgba(0,0,0,.75)),
-        linear-gradient(90deg, rgba(0,0,0,.70), rgba(0,0,0,.35));
+        radial-gradient(circle at 5% 45%, rgba(201,162,39,.10), transparent 28%),
+        radial-gradient(circle at 95% 60%, rgba(201,162,39,.09), transparent 30%),
+        linear-gradient(135deg, #ffffff, #fffaf0);
     }
-    .hero__inner{
-      position: relative;
-      z-index:2;
-      padding: 64px 0;
-      text-align:center;
-      color:#fff;
+
+    .ct-hero::before,
+    .ct-hero::after {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border: 1px solid rgba(201,162,39,.25);
+      border-radius: 50%;
+      pointer-events: none;
     }
-    .hero__title{
-      font-family: var(--font-display);
+
+    .ct-hero::before {
+      left: -355px;
+      top: 10px;
+    }
+
+    .ct-hero::after {
+      right: -355px;
+      bottom: -150px;
+    }
+
+    .ct-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      color: var(--ct-gold-dark);
+      font-size: 11px;
       font-weight: 800;
-      letter-spacing: -0.02em;
-      margin: 0 0 10px;
-      font-size: clamp(34px, 4vw, 56px);
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
-    .crumbs{
-      display:flex;
-      justify-content:center;
-      gap: 10px;
-      flex-wrap:wrap;
-      color: rgba(255,255,255,.88);
+
+    .ct-eyebrow::before,
+    .ct-eyebrow::after {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--ct-gold);
+    }
+
+    .ct-hero h1 {
+      font-family: var(--ct-serif);
+      font-size: clamp(42px, 5.5vw, 76px);
+      line-height: 1.17;
+      letter-spacing: -1.5px;
+      margin: 22px auto;
       font-weight: 700;
-      font-size: 14px;
-    }
-    .crumbs a{ color: rgba(255,255,255,.92); }
-    .crumbs .sep{ opacity:.7; }
-
-    /* Page section */
-    .page{
-      padding: 70px 0;
-      background:#fff;
     }
 
-    .contactGrid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
+    .ct-hero h1 span {
+      display: block;
+      color: #b89900;
+    }
+
+    .ct-hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--ct-muted);
+    }
+
+    .ct-hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      color: var(--ct-gold);
+      margin-top: 30px;
+    }
+
+    .ct-hero-divider::before,
+    .ct-hero-divider::after {
+      content: "";
+      width: 75px;
+      height: 1px;
+      background: var(--ct-gold);
+      opacity: .65;
+    }
+
+    /* ======================================
+       CONTACT AND BOOKING SECTION
+    ====================================== */
+
+    .ct-main {
+      padding: 90px 0 100px;
+      background:
+        radial-gradient(circle at 90% 20%, rgba(201,162,39,.05), transparent 30%),
+        #ffffff;
+    }
+
+    .ct-section-heading {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .ct-section-heading h2 {
+      font-family: var(--ct-serif);
+      font-size: clamp(32px, 3.5vw, 48px);
+      margin: 16px 0;
+    }
+
+    .ct-section-heading h2 span {
+      color: #b89900;
+    }
+
+    .ct-section-heading p {
+      color: var(--ct-muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .ct-booking-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 28px;
-      align-items:start;
+      align-items: stretch;
     }
 
-    /* LEFT form */
-    .formCard{ padding: 28px; }
-    .formTitle{
-      font-family: var(--font-display);
-      font-size: clamp(34px, 3.2vw, 50px);
-      margin: 0 0 10px;
-      letter-spacing: -0.02em;
+    /* ======================================
+       SHARED PREMIUM CARDS
+    ====================================== */
+
+    .ct-card {
+      min-width: 0;
+      border: 1px solid rgba(201,162,39,.4);
+      border-radius: 22px;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 16px 45px rgba(40,30,10,.08);
+      transition: box-shadow .3s ease, transform .3s ease;
     }
-    .formSub{
-      margin: 0 0 22px;
-      color: rgba(15,23,42,.72);
+
+    .ct-card:hover {
+      box-shadow: 0 25px 55px rgba(40,30,10,.12);
+      transform: translateY(-4px);
+    }
+
+    .ct-card-top {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(115deg, #0a0a0a, #242017);
+      padding: 28px 30px;
+      color: #ffffff;
+    }
+
+    .ct-card-top::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border: 1px solid rgba(201,162,39,.3);
+      border-radius: 50%;
+      right: -60px;
+      top: -70px;
+    }
+
+    .ct-card-top h3 {
+      font-family: var(--ct-serif);
+      font-size: clamp(23px, 2vw, 30px);
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #ffffff;
+    }
+
+    .ct-card-top p {
+      color: #d7caa6;
+      font-size: 13px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .ct-card-body {
+      padding: 32px 30px;
+    }
+
+    /* ======================================
+       CONTACT FORM
+    ====================================== */
+
+    .ct-field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px 18px;
+    }
+
+    .ct-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .ct-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #39352d;
+    }
+
+    .ct-field label span {
+      color: var(--ct-gold-dark);
+    }
+
+    .ct-input {
+      width: 100%;
+      height: 52px;
+      border: 1px solid #e7dec3;
+      border-radius: 11px;
+      background: #fffdf8;
+      padding: 0 16px;
+      font: 400 13px var(--ct-sans);
+      color: #191919;
+      outline: none;
+      transition: border-color .25s, box-shadow .25s;
+    }
+
+    .ct-input::placeholder {
+      color: #999185;
+    }
+
+    .ct-input:focus {
+      border-color: var(--ct-gold);
+      box-shadow: 0 0 0 4px rgba(201,162,39,.11);
+      background: #ffffff;
+    }
+
+    .ct-textarea {
+      min-height: 165px;
+      padding: 16px;
+      resize: vertical;
+    }
+
+    .ct-submit {
+      margin-top: 26px;
+      width: 100%;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border: 0;
+      border-radius: 12px;
+      background: linear-gradient(110deg, #ad8900, #e5c72e);
+      color: #111111;
+      font-family: var(--ct-sans);
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .ct-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(201,162,39,.24);
+    }
+
+    .ct-submit:disabled {
+      opacity: .65;
+      cursor: wait;
+      transform: none;
+    }
+
+    .ct-status {
+      display: block;
+      margin-top: 14px;
+      min-height: 20px;
+      font-size: 13px;
       font-weight: 600;
     }
 
-    .fieldGrid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px 18px;
-      margin-top: 18px;
+    .ct-privacy-note {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      margin-top: 14px;
+      color: #777066;
+      font-size: 11px;
+      line-height: 1.6;
     }
 
-    .field label{
-      display:block;
-      font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: rgba(15,23,42,.85);
+    .ct-privacy-note i {
+      color: var(--ct-gold-dark);
+      margin-top: 2px;
     }
 
-    .input{
-      width:100%;
-      height: 44px;
-      padding: 0 14px;
-      border: 1px solid rgba(15,23,42,.16);
-      border-radius: 10px;
-      background: #e5e7eb;
-      outline: none;
-      font: inherit;
-    }
-    .input:focus{
-      background:#fff;
-      border-color: rgba(176,141,47,.55);
-      box-shadow: 0 0 0 4px rgba(176,141,47,.14);
+    /* ======================================
+       CALENDLY
+    ====================================== */
+
+    .ct-booking-body {
+      padding: 16px;
     }
 
-    .msgWrap{ grid-column: 1 / -1; }
-    .textarea{
-      width:100%;
-      min-height: 180px;
-      padding: 12px 14px;
-      border: 1px solid rgba(15,23,42,.16);
-      border-radius: 10px;
-      background: #e5e7eb;
-      outline: none;
-      font: inherit;
-      resize: vertical;
-    }
-    .textarea:focus{
-      background:#fff;
-      border-color: rgba(176,141,47,.55);
-      box-shadow: 0 0 0 4px rgba(176,141,47,.14);
-    }
-
-    .sendRow{ margin-top: 18px; display:flex; align-items:center; gap:12px; }
-    .sendBtn{
-      height: 44px;
-      padding: 0 30px;
-      border: none;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 900;
-      color:#fff;
-      background: linear-gradient(135deg,var(--gold),var(--gold2));
-      box-shadow: 0 18px 55px rgba(176,141,47,.22);
-      transition: transform .18s ease;
-    }
-    .sendBtn:hover{ transform: translateY(-2px); }
-    .sendBtn:disabled{ opacity:.65; cursor:not-allowed; transform:none; }
-
-    .formStatus{
-      font-weight: 800;
-      color: rgba(15,23,42,.75);
-      font-size: 14px;
-    }
-
-    /* RIGHT info */
-    .infoCol{ padding-left: 6px; }
-    .infoStack{ display:grid; gap: 22px; padding-top: 12px; }
-    .infoRow{ display:flex; gap: 16px; align-items:flex-start; }
-    .infoIcon{
-      width: 52px; height: 52px; border-radius: 999px;
-      display:grid; place-items:center;
-      background: rgba(176,141,47,.14);
-      border: 1px solid rgba(176,141,47,.22);
-      flex: 0 0 auto;
-    }
-    .infoRow h4{ margin: 0; font-size: 28px; font-weight: 900; letter-spacing: -0.01em; }
-    .infoRow p{ margin: 6px 0 0; font-weight: 700; color: rgba(15,23,42,.78); }
-
-    .divider{
-      height: 2px;
-      background: rgba(176,141,47,.55);
+    .ct-calendly {
       width: 100%;
-      margin: 6px 0 10px;
-      opacity: .55;
+      min-width: 0;
+      height: 690px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #ffffff;
     }
 
-    .followTitle{ font-size: 28px; font-weight: 900; margin: 0; }
-    .social{ display:flex; gap: 10px; margin-top: 10px; }
-    .social a{
-      width: 40px; height: 40px; border-radius: 999px;
-      display:grid; place-items:center;
-      background: rgba(176,141,47,.14);
-      border: 1px solid rgba(176,141,47,.22);
-      font-weight: 900;
+    .ct-booking-note {
+      padding: 15px 20px 24px;
+      color: #6d675b;
+      text-align: center;
+      font-size: 12px;
     }
 
-    @media (max-width: 980px){
-      .contactGrid{ grid-template-columns: 1fr; }
-      .fieldGrid{ grid-template-columns: 1fr; }
-      .infoCol{ padding-left: 0; }
+    .ct-booking-note i {
+      color: var(--ct-gold-dark);
+      margin-right: 5px;
+    }
+
+    /* ======================================
+       CONTACT INFORMATION
+    ====================================== */
+
+    .ct-info-section {
+      padding: 90px 0;
+      background: linear-gradient(135deg, #fffdf8, #f9f4e8);
+      border-top: 1px solid #f1e5c4;
+    }
+
+    .ct-info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .ct-info-card {
+      text-align: center;
+      padding: 34px 20px;
+      border: 1px solid rgba(201,162,39,.35);
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(30,25,10,.05);
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .ct-info-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 40px rgba(30,25,10,.1);
+    }
+
+    .ct-info-icon {
+      display: grid;
+      place-items: center;
+      width: 66px;
+      height: 66px;
+      margin: 0 auto 20px;
+      border: 1px solid var(--ct-gold);
+      border-radius: 50%;
+      background: linear-gradient(145deg, #fff, #f6e9b4);
+      color: #9d7900;
+      font-size: 25px;
+    }
+
+    .ct-info-card h3 {
+      font-family: var(--ct-serif);
+      font-size: 23px;
+      margin: 0 0 12px;
+    }
+
+    .ct-info-card a,
+    .ct-info-card p {
+      display: block;
+      margin: 0;
+      color: #5b564c;
+      font-size: 14px;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .ct-info-card a:hover {
+      color: var(--ct-gold-dark);
+    }
+
+    /* ======================================
+       SOCIAL MEDIA
+    ====================================== */
+
+    .ct-social-section {
+      padding: 65px 20px;
+      text-align: center;
+      background: #0b0b0b;
+    }
+
+    .ct-social-section h2 {
+      color: #ffffff;
+      font-family: var(--ct-serif);
+      font-size: clamp(30px, 3vw, 43px);
+      margin: 0 0 12px;
+    }
+
+    .ct-social-section h2 span {
+      color: #d4ae28;
+    }
+
+    .ct-social-section p {
+      color: #c2bdb2;
+      font-size: 14px;
+    }
+
+    .ct-social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .ct-social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-width: 155px;
+      min-height: 50px;
+      padding: 12px 22px;
+      border: 1px solid #9d7d16;
+      border-radius: 50px;
+      color: #e8d8a3;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background .25s, color .25s, transform .25s;
+    }
+
+    .ct-social-links a:hover {
+      background: #d0ac26;
+      color: #101010;
+      transform: translateY(-3px);
+    }
+
+    /* ======================================
+       SCROLL ANIMATION
+    ====================================== */
+
+    .ct-reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .ct-motion-ready .ct-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity .8s cubic-bezier(.22,1,.36,1),
+        transform .8s cubic-bezier(.22,1,.36,1);
+    }
+
+    .ct-motion-ready .ct-reveal.ct-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ======================================
+       RESPONSIVE
+    ====================================== */
+
+    @media (max-width: 1000px) {
+      .ct-booking-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ct-calendly {
+        height: 680px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .ct-container {
+        width: calc(100% - 32px);
+      }
+
+      .ct-hero {
+        padding: 70px 18px 65px;
+      }
+
+      .ct-hero h1 {
+        font-size: clamp(36px, 9vw, 48px);
+      }
+
+      .ct-hero p {
+        font-size: 14px;
+      }
+
+      .ct-main {
+        padding: 60px 0 70px;
+      }
+
+      .ct-section-heading {
+        margin-bottom: 32px;
+      }
+
+      .ct-field-grid {
+        grid-template-columns: 1fr;
+        gap: 19px;
+      }
+
+      .ct-card-top {
+        padding: 25px 20px;
+      }
+
+      .ct-card-body {
+        padding: 25px 20px;
+      }
+
+      .ct-booking-body {
+        padding: 8px;
+      }
+
+      .ct-calendly {
+        height: 700px;
+      }
+
+      .ct-info-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .ct-info-section {
+        padding: 65px 0;
+      }
+
+      .ct-social-links {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 340px;
+        margin: 28px auto 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ct-page *,
+      .ct-page *::before,
+      .ct-page *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .ct-motion-ready .ct-reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
 
-<body>
+<body id="top">
 
-  <!-- Navbar injected -->
+  <!-- EXISTING NAVBAR -->
   <div id="navbarMount"></div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero__inner">
-        <h1 class="hero__title">Contact Us</h1>
-        <div class="crumbs">
-          <a href="index.html">Home</a>
-          <span class="sep">›</span>
-          <span>Contact Us</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main class="ct-page">
 
-  <!-- CONTENT -->
-<section class="page">
-  <div class="container">
+    <!-- PREMIUM HERO -->
+    <section class="ct-hero">
+      <div class="ct-container">
 
-    <div class="contactIntro">
-      <h2 class="formTitle">Get In Touch</h2>
-      <p class="formSub">
-        Fill out the form or book a free consultation directly with Nash Tax & Bookkeeping.
-      </p>
-    </div>
+        <span class="ct-eyebrow ct-reveal">
+          WE'RE HERE TO HELP
+        </span>
 
-    <div class="contactBookingGrid">
+        <h1 class="ct-reveal">
+          Let's Connect.
+          <span>Let's Grow Together.</span>
+        </h1>
 
-      <!-- LEFT: CONTACT FORM -->
-      <div class="formCard">
-        <h3 class="blockTitle">Send us a Message</h3>
-
-        <form id="contactForm" novalidate>
-          <div class="fieldGrid">
-            <div class="field">
-              <label for="name">Name</label>
-              <input class="input" id="name" name="name" type="text" placeholder="Name" required>
-            </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input class="input" id="email" name="email" type="email" placeholder="Email" required>
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input class="input" id="phone" name="phone" type="text" placeholder="Phone">
-            </div>
-
-            <div class="field">
-              <label for="address">Address</label>
-              <input class="input" id="address" name="address" type="text" placeholder="Address">
-            </div>
-
-            <div class="field msgWrap">
-              <label for="message">Message</label>
-              <textarea class="textarea" id="message" name="message" placeholder="Message" required></textarea>
-            </div>
-          </div>
-
-          <div class="sendRow">
-            <button class="sendBtn" id="sendBtn" type="submit">Send</button>
-            <span class="formStatus" id="formStatus"></span>
-          </div>
-        </form>
-      </div>
-
-      
-
-      <!-- MIDDLE DIVIDER -->
-      <div class="verticalDivider"></div>
-
-      <!-- RIGHT: CALENDLY -->
-      <div class="bookingCard">
-        <h3 class="blockTitle">Book a FREE Consultation</h3>
-        <p class="bookingSub">
-          Choose a convenient time to discuss your tax, bookkeeping, or business needs.
+        <p class="ct-reveal">
+          Have questions about taxes, bookkeeping or your business?
+          Our team is ready to provide personalized guidance
+          and help you take the next step with confidence.
         </p>
 
-       <div
-  class="calendly-inline-widget"
-  data-url="https://calendly.com/tax-nashath/new-meeting?back=1&month=2026-06"
-  style="min-width:320px;height:550px;">
-  
-</div>
-
-      </div>
-
-    </div>
-
-    <!-- CONTACT INFO BELOW -->
-    <div class="bottomContact">
-      <div class="infoRow">
-        <div class="infoIcon">📞</div>
-        <div>
-          <h4>Call Us</h4>
-          <p>+1 914 413 4870</p>
+        <div class="ct-hero-divider ct-reveal">
+          <i class="fa-solid fa-diamond"></i>
         </div>
-      </div>
 
-      <div class="infoRow">
-        <div class="infoIcon">✉️</div>
-        <div>
-          <h4>Email Us</h4>
-          <p>tax@nashtaxes.com</p>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM + CALENDLY -->
+    <section class="ct-main" id="contact">
+
+      <div class="ct-container">
+
+        <div class="ct-section-heading ct-reveal">
+          <span class="ct-eyebrow">GET IN TOUCH</span>
+
+          <h2>
+            How Can We <span>Help You?</span>
+          </h2>
+
+          <p>
+            Send us a message or book a free consultation
+            at a time that works for you.
+          </p>
         </div>
-      </div>
 
-      <div class="infoRow">
-        <div class="infoIcon">📍</div>
-        <div>
-          <h4>Our Office</h4>
-          <p>Dallas, TX</p>
+        <div class="ct-booking-grid">
+
+          <!-- LEFT: EMAILJS CONTACT FORM -->
+          <div class="ct-card ct-reveal">
+
+            <div class="ct-card-top">
+              <h3>Send Us a Message</h3>
+              <p>
+                Tell us how we can help and our team
+                will get back to you.
+              </p>
+            </div>
+
+            <div class="ct-card-body">
+
+              <form id="contactForm" novalidate>
+
+                <div class="ct-field-grid">
+
+                  <div class="ct-field">
+                    <label for="name">
+                      Full Name <span>*</span>
+                    </label>
+
+                    <input
+                      class="ct-input"
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Your full name"
+                      autocomplete="name"
+                      required>
+                  </div>
+
+                  <div class="ct-field">
+                    <label for="email">
+                      Email Address <span>*</span>
+                    </label>
+
+                    <input
+                      class="ct-input"
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Your email address"
+                      autocomplete="email"
+                      required>
+                  </div>
+
+                  <div class="ct-field">
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                      class="ct-input"
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="Your phone number"
+                      autocomplete="tel">
+                  </div>
+
+                  <div class="ct-field">
+                    <label for="address">Address</label>
+
+                    <input
+                      class="ct-input"
+                      id="address"
+                      name="address"
+                      type="text"
+                      placeholder="City / State"
+                      autocomplete="street-address">
+                  </div>
+
+                  <div class="ct-field ct-field-full">
+                    <label for="message">
+                      Your Message <span>*</span>
+                    </label>
+
+                    <textarea
+                      class="ct-input ct-textarea"
+                      id="message"
+                      name="message"
+                      placeholder="Tell us about your tax, bookkeeping or business needs..."
+                      required></textarea>
+                  </div>
+
+                </div>
+
+                <button
+                  type="submit"
+                  class="ct-submit"
+                  id="sendBtn">
+
+                  Send Message
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </button>
+
+                <span
+                  class="ct-status"
+                  id="formStatus"
+                  role="status"
+                  aria-live="polite"></span>
+
+                <div class="ct-privacy-note">
+                  <i class="fa-solid fa-lock"></i>
+
+                  <span>
+                    Please do not include Social Security numbers,
+                    bank account details or other sensitive tax
+                    information in this form.
+                  </span>
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT: CALENDLY BOOKING -->
+          <div class="ct-card ct-reveal">
+
+            <div class="ct-card-top">
+              <h3>Book a FREE Consultation</h3>
+              <p>
+                Choose a convenient time to discuss
+                your financial and business needs.
+              </p>
+            </div>
+
+            <div class="ct-booking-body">
+
+              <div
+                class="calendly-inline-widget ct-calendly"
+                data-url="https://calendly.com/tax-nashath/new-meeting"
+                aria-label="Schedule a consultation using Calendly">
+              </div>
+
+            </div>
+
+            <div class="ct-booking-note">
+              <i class="fa-regular fa-calendar-check"></i>
+              Convenient online appointment scheduling
+            </div>
+
+          </div>
+
         </div>
-      </div>
-    </div>
 
-    <div class="followBox">
-      <h4 class="followTitle">Follow Us:</h4>
-      <div class="social" aria-label="Social links">
-        <a href="https://www.instagram.com/nash_tax_?stkn=MWk3NzR4aDB4OWI2bA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+      </div>
+
+    </section>
+
+    <!-- CONTACT INFORMATION -->
+    <section class="ct-info-section">
+
+      <div class="ct-container">
+
+        <div class="ct-section-heading ct-reveal">
+          <span class="ct-eyebrow">REACH OUT TO US</span>
+
+          <h2>
+            We're Just a <span>Message Away.</span>
+          </h2>
+
+          <p>
+            Connect with Nash Tax &amp; Bookkeeping
+            through your preferred channel.
+          </p>
+        </div>
+
+        <div class="ct-info-grid">
+
+          <div class="ct-info-card ct-reveal">
+
+            <div class="ct-info-icon">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+
+            <h3>Call Us</h3>
+
+            <a href="tel:+19144134870">
+              +1 (914) 413-4870
+            </a>
+
+          </div>
+
+          <div class="ct-info-card ct-reveal">
+
+            <div class="ct-info-icon">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+
+            <h3>Email Us</h3>
+
+            <a href="mailto:tax@nashtaxes.com">
+              tax@nashtaxes.com
+            </a>
+
+          </div>
+
+          <div class="ct-info-card ct-reveal">
+
+            <div class="ct-info-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <h3>Our Location</h3>
+
+            <p>
+              Dallas, Texas<br>
+              Serving Clients Nationwide
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SOCIAL MEDIA -->
+    <section class="ct-social-section">
+
+      <div class="ct-container ct-reveal">
+
+        <h2>
+          Stay Connected <span>With Us.</span>
+        </h2>
+
+        <p>
+          Follow Nash Tax &amp; Bookkeeping
+          for updates, financial insights and tax tips.
+        </p>
+
+        <div class="ct-social-links">
+
+          <a
+            href="https://www.instagram.com/nash_tax_/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61588369831428"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <i class="fa-brands fa-facebook-f"></i>
+            Facebook
+          </a>
+
+          <a
+            href="https://wa.me/19144134870?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20tax%20services."
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+ <!-- FONT AWESOME: Add once inside <head> -->
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- NASH TAX PREMIUM FOOTER -->
+<footer class="pFooter" id="footer">
+  <div class="pFooter__inner">
+
+    <!-- LOGO AND SOCIALS -->
+    <div class="pFooter__brand">
+      <a href="index.html" class="pFooter__logoWrap">
+        <img
+          src="assests/img/llogo.png"
+          alt="Nash Tax & Bookkeeping"
+          class="pFooter__logo"
+        >
+      </a>
+
+      <div class="pFooter__socialIcons">
+        <a href="https://www.instagram.com/nash_tax_/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a href="https://www.facebook.com/profile.php?id=61588369831428&mibextid=wwXIfr&rdid=trMZPBTIOBIsiyRk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19s48ntWQj%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener" aria-label="Facebook">
+        <a href="https://www.facebook.com/profile.php?id=61588369831428"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="https://wa.me/19144134870?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20tax%20services." target="_blank" rel="noopener" aria-label="WhatsApp">
+        <a href="https://wa.me/19144134870"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
     </div>
 
-  </div>
-</section>
+    <!-- QUICK LINKS -->
+    <div class="pFooter__col">
+      <h3 class="pFooter__title">Quick Links</h3>
 
-  <!-- FOOTER (unchanged from your file) -->
-  <footer class="pFooter" id="footer">
-    <div class="container pFooter__inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="service.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms &amp; Privacy</a>
+    </div>
 
-      <div class="pFooter__brand">
-        <a href="index.html" class="pFooter__logoWrap">
-          <img src="assests/img/llogo.png" alt="Nash Tax & Bookkeeping Logo" class="pFooter__logo">
+    <!-- SERVICES -->
+    <div class="pFooter__col">
+      <h3 class="pFooter__title">Our Services</h3>
+
+      <a href="individual.html">Individual Tax</a>
+      <a href="businesstax.html">Business Tax</a>
+      <a href="bookkeeping.html">Bookkeeping</a>
+      <a href="payroll.html">Payroll</a>
+      <a href="business-formation.html">Business Formation</a>
+      <a href="tax-planning.html">Tax Planning</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="pFooter__contact">
+      <h3 class="pFooter__title">Contact Us</h3>
+
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-phone"></i>
+        </span>
+        <a href="tel:+19144134870">
+          +1 (914) 413 4870
         </a>
-
-        <div class="pFooter__socialIcons" aria-label="Social media links">
-          <a href="https://www.instagram.com/nash_tax_?stkn=MWk3NzR4aDB4OWI2bA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61588369831428&mibextid=wwXIfr&rdid=trMZPBTIOBIsiyRk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19s48ntWQj%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="https://wa.me/19144134870?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20tax%20services." target="_blank" rel="noopener" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-        </div>
       </div>
 
-      <div class="pFooter__col">
-        <div class="pFooter__title">Quick Links</div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="service.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="terms.html">Privacy Policy</a>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-envelope"></i>
+        </span>
+        <a href="mailto:tax@nashtaxes.com">
+          tax@nashtaxes.com
+        </a>
       </div>
 
-      <div class="pFooter__col">
-        <div class="pFooter__title">What We Do</div>
-        <a href="individual.html">Individual Tax</a>
-        <a href="businesstax.html">Business Tax</a>
-        <a href="bookkeeping.html">Bookkeeping</a>
-        <a href="payroll.html">Payroll</a>
-        <a href="businessformation.html">Business Formation</a>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-location-dot"></i>
+        </span>
+        <span>
+          Dallas, TX
+          <small>Remote-friendly</small>
+        </span>
       </div>
 
-      <div class="pFooter__contact">
-        <div class="pFooter__card">
-          <div class="pFooter__cardTitle">Get In Touch</div>
-
-          <div class="pFooter__item">
-            <span class="pFooter__dot"></span>
-            <a href="tel:+19144134870">+1 (914) 413 4870</a>
-          </div>
-
-          <div class="pFooter__item">
-            <span class="pFooter__dot"></span>
-            <a href="mailto:tax@nashtaxes.com">tax@nashtaxes.com</a>
-          </div>
-
-          <div class="pFooter__item">
-            <span class="pFooter__dot"></span>
-            <span>Dallas, TX • Remote-friendly</span>
-          </div>
-
-          <a class="pFooter__cta" href="contact.html">Free Consultation</a>
-          <div class="pFooter__note">Reply within business hours (9AM–6PM)</div>
-        </div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-regular fa-clock"></i>
+        </span>
+        <span>
+          Mon – Fri: 9AM – 6PM
+          <small>Eastern Time</small>
+        </span>
       </div>
-
     </div>
 
-    <div class="container pFooter__bottom">
-      <span>© 2025 Nash Tax &amp; Bookkeeping. All rights reserved.</span>
-      <a class="pFooter__top" href="#top">Back to top ↑</a>
-    </div>
-  </footer>
+    <!-- NEWSLETTER -->
+    <div class="pFooter__newsletter">
+      <h3 class="pFooter__title">
+        Subscribe for Updates
+      </h3>
 
-  <!-- Navbar loader -->
+      <p>
+        Get tax tips, deadlines and business
+        insights delivered to your inbox.
+      </p>
+
+      <form class="pFooter__subscribe"
+            id="footerSubscribeForm">
+        <label for="footerEmail" class="pFooter__srOnly">
+          Email address
+        </label>
+
+        <input
+          type="email"
+          id="footerEmail"
+          name="email"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        >
+
+        <button type="submit" aria-label="Subscribe">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+      <p class="pFooter__formStatus"
+         id="footerSubscribeStatus"
+         role="status"
+         aria-live="polite"></p>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="pFooter__bottom">
+    <span>
+      © 2026 Nash Tax &amp; Bookkeeping.
+      All rights reserved.
+    </span>
+
+    <div class="pFooter__bottomLinks">
+      <a href="terms.html">Terms of Service</a>
+      <a href="terms.html">Privacy Policy</a>
+      <a href="#top" class="pFooter__top">
+        Back to top ↑
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <!-- EXISTING NAVBAR -->
   <script src="assests/js/navbar.js" defer></script>
 
-  <!-- EmailJS (ONLY ONCE) -->
+  <!-- CALENDLY -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <!-- EMAILJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <!-- Contact form handler (ONLY ONCE) -->
+  <!-- EXISTING EMAIL HANDLER -->
   <script src="assests/js/contact-email.js" defer></script>
+
+  <!-- PREMIUM SCROLL REVEAL -->
+  <script>
+    (() => {
+      function initContactAnimations() {
+        const elements = document.querySelectorAll(".ct-reveal");
+
+        if (
+          !("IntersectionObserver" in window) ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("ct-visible");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.08,
+            rootMargin: "0px 0px -30px 0px"
+          }
+        );
+
+        elements.forEach(element => observer.observe(element));
+
+        document.documentElement.classList.add("ct-motion-ready");
+
+        requestAnimationFrame(() => {
+          elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              element.classList.add("ct-visible");
+              observer.unobserve(element);
+            }
+          });
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initContactAnimations);
+      } else {
+        initContactAnimations();
+      }
+    })();
+  </script>
+<script src="assests/js/scroll-animation.js" defer></script>
 </body>
 </html>

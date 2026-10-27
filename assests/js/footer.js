@@ -1,9 +1,14 @@
-(async function () {
-  const mount = document.getElementById("footerMount");
-  if (!mount) return;
 
-  const res = await fetch("assests/html/footer.html");
-  mount.innerHTML = await res.text();
+document.getElementById("footerSubscribeForm")
+  ?.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  document.getElementById("year").textContent = new Date().getFullYear();
-})();
+    const status = document.getElementById(
+      "footerSubscribeStatus"
+    );
+
+    if (status) {
+      status.textContent =
+        "Newsletter subscriptions are coming soon.";
+    }
+  });

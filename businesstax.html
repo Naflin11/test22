@@ -1,633 +1,1461 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Business Tax — Nash Tax</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Business Tax Services | Nash Tax &amp; Bookkeeping</title>
+  <meta name="description" content="Professional business tax preparation, tax planning, entity selection and IRS representation services from Nash Tax & Bookkeeping.">
+  <link rel="canonical" href="https://www.nashtaxes.com/businesstax.html">
   <link rel="icon" type="image/png" href="assests/img/llogo1.png">
 
-    <!-- Google tag (gtag.js) -->
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- SHARED STYLES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assests/css/style.css">
+  <link rel="stylesheet" href="assests/css/navbar.css">
+  <link rel="stylesheet" href="assests/css/footer.css">
+  <link rel="stylesheet" href="assests/css/scroll-animation.css">
+
+  <!-- GOOGLE ADS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956738872"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17956738872');
+    gtag("js",new Date());
+    gtag("config","AW-17956738872");
   </script>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- ✅ Shared CSS (must be same on ALL pages) -->
-  <link rel="stylesheet" href="assests/css/style.css" />
-  <link rel="stylesheet" href="assests/css/navbar.css" />
 
   <style>
-    :root{
-      --font-nav: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      --font-display: "Playfair Display", serif;
+    /* =========================================
+       BUSINESS TAX SERVICE PAGE
+       WHITE | IVORY | CHAMPAGNE GOLD
+    ========================================= */
 
-      --bg:#ffffff;
-      --text:#0b1220;
-      --muted:#6b7280;
-
-      --gold:#b08d2f;
-      --gold2:#d8b556;
-
-      --border: rgba(15,23,42,.12);
-      --shadowSoft: 0 14px 38px rgba(2,6,23,.10);
-
-      --r22:22px;
-      --max: 1200px;
-
-      --navH: 82px;
+    .it-page {
+      --it-gold: #b08d2f;
+      --it-gold-light: #d8b556;
+      --it-cream: #faf8f1;
+      --it-border: #e8ddbf;
+      --it-text: #29251c;
+      --it-muted: #706a5e;
+      font-family: "Inter", sans-serif;
+      color: var(--it-text);
+      overflow: clip;
     }
 
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:var(--font-body); }
-    a{ color:inherit; text-decoration:none; }
-    img{ max-width:100%; display:block; }
-    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+    .it-page *,
+    .it-page *::before,
+    .it-page *::after {
+      box-sizing: border-box;
+    }
 
-    /* ✅ Navbar always visible */
-    #navbarMount{
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      z-index: 9999;
+    .it-page a {
+      text-decoration: none;
     }
-    body{ padding-top: var(--navH); }
 
-    /* ===== Hero ===== */
-    .hero{
-      position: relative;
-      min-height: 320px;
-      display:flex;
-      align-items:center;
-      overflow:hidden;
-      background:#0b1220;
+    .it-container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
     }
-    .hero__bg{
-      position:absolute;
-      inset:0;
-      background: url("assests/img/aa.jpg") center/cover no-repeat;
-      transform: scale(1.03);
-      filter: saturate(1.02) contrast(1.02);
-    }
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(900px 380px at 20% 30%, rgba(0,0,0,.25), rgba(0,0,0,.75)),
-        linear-gradient(90deg, rgba(0,0,0,.70), rgba(0,0,0,.35));
-    }
-    .hero__inner{
-      position: relative;
-      z-index:2;
-      padding: 64px 0;
-      text-align:center;
-      color:#fff;
-    }
-    .hero__title{
-      font-family: var(--font-display);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin: 0 0 10px;
-      font-size: clamp(34px, 4vw, 56px);
-    }
-    .crumbs{
-      display:flex;
-      justify-content:center;
-      gap: 10px;
-      flex-wrap:wrap;
-      color: rgba(255,255,255,.88);
+
+    .it-eyebrow {
+      display: inline-block;
+      color: #a17e1c;
+      font-size: 11px;
       font-weight: 700;
-      font-size: 14px;
-    }
-    .crumbs a{ color: rgba(255,255,255,.92); }
-    .crumbs .sep{ opacity:.7; }
-
-    /* ===== Main layout ===== */
-    .page{
-      padding: 70px 0;
-      background:#fff;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap: 28px;
-      align-items:start;
-    }
-
-    .card{
-      border: 1px solid var(--border);
-      border-radius: var(--r22);
-      background:#fff;
-      box-shadow: var(--shadowSoft);
-    }
-
-    /* Left content */
-    .content{ padding: 26px; }
-    .content h2{
-      font-family: var(--font-display);
-      font-size: clamp(30px, 3vw, 44px);
-      margin: 0 0 12px;
-      letter-spacing: -0.02em;
-    }
-    .content p{
-      color: rgba(15,23,42,.78);
-      line-height: 1.85;
-      margin: 0 0 12px;
-    }
-
-    .featureList{
-      margin: 18px 0 0;
-      padding: 0;
-      list-style: none;
-      display:grid;
-      gap: 12px;
-    }
-    .feature{
-      display:flex;
-      gap: 12px;
-      padding: 14px;
-      border: 1px solid rgba(15,23,42,.10);
-      border-radius: 16px;
-      background: rgba(176,141,47,.06);
-    }
-    .dot{
-      width: 12px; height: 12px;
-      border-radius: 999px;
-      margin-top: 7px;
-      background: linear-gradient(135deg,var(--gold),var(--gold2));
-      flex: 0 0 auto;
-    }
-    .feature strong{ display:block; margin-bottom: 3px; }
-    .feature span{ color: rgba(15,23,42,.72); line-height: 1.6; }
-
-    .inlineImg{
-      margin-top: 20px;
-      border-radius: var(--r22);
-      overflow:hidden;
-      border: 1px solid rgba(15,23,42,.08);
-      box-shadow: var(--shadowSoft);
-    }
-
-    /* Right sidebar */
-    .side{
-      position: sticky;
-      top: calc(var(--navH) + 18px);
-    }
-    .sideHead{
-      padding: 16px 18px;
-      border-bottom: 1px solid rgba(15,23,42,.10);
-      background: linear-gradient(135deg,var(--gold),var(--gold2));
-      color:#0b1220;
-      border-radius: var(--r22) var(--r22) 0 0;
-      font-weight: 900;
-      font-family: var(--font-nav);
-      letter-spacing: .08em;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
+      margin-bottom: 15px;
     }
-    .sideBody{ padding: 18px; }
-    .fRow{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .inp{
-      width:100%;
-      padding: 12px 12px;
-      border: 1px solid rgba(15,23,42,.14);
-      border-radius: 14px;
-      outline: none;
-      font: inherit;
-      background:#fff;
-    }
-    .inp:focus{
-      border-color: rgba(176,141,47,.55);
-      box-shadow: 0 0 0 4px rgba(176,141,47,.14);
-    }
-    textarea.inp{ min-height: 120px; resize: vertical; }
-    .check{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      margin: 12px 0 14px;
-      color: rgba(15,23,42,.72);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-    .btn{
-      width:100%;
-      padding: 12px 14px;
-      border-radius: 999px;
-      border: none;
-      cursor:pointer;
-      font-weight: 900;
-      color:#fff;
-      background: linear-gradient(135deg,var(--gold),var(--gold2));
-      box-shadow: 0 18px 55px rgba(176,141,47,.22);
-      transition: transform .18s ease;
-    }
-    .btn:hover{ transform: translateY(-2px); }
 
-    .contactBlock{
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(15,23,42,.10);
-      display:grid;
-      gap: 10px;
+    /* HERO */
+
+    .it-hero {
+      position: relative;
+      padding: 85px 20px 80px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 15% 30%,rgba(201,162,39,.12),transparent 32%),
+        radial-gradient(circle at 85% 70%,rgba(201,162,39,.07),transparent 30%),
+        linear-gradient(135deg,#fff,#faf8ef);
     }
-    .cItem{
-      display:flex;
-      gap: 10px;
-      align-items:center;
-      color: rgba(15,23,42,.82);
+
+    .it-hero h1 {
+      font-family: "Playfair Display",serif;
+      font-size: clamp(39px,5vw,65px);
       font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      color: #29251c;
+      margin: 0 0 20px;
     }
-    .cBadge{
-      width: 42px; height:42px;
-      border-radius: 999px;
-      display:grid; place-items:center;
-      background: rgba(176,141,47,.14);
-      border: 1px solid rgba(176,141,47,.22);
+
+    .it-hero h1 span,
+    .it-section-heading h2 span,
+    .it-consultation-copy h2 span {
+      color: var(--it-gold);
+    }
+
+    .it-hero-description {
+      max-width: 720px;
+      margin: 0 auto 25px;
+      color: var(--it-muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .it-breadcrumb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 11px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .it-breadcrumb a {
+      color: #5e574a;
+    }
+
+    .it-breadcrumb i {
+      color: var(--it-gold);
+      font-size: 10px;
+    }
+
+    /* INTRO */
+
+    .it-intro {
+      padding: 65px 0 25px;
+      background: #fff;
+    }
+
+    .it-section-heading {
+      max-width: 850px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .it-section-heading h2 {
+      font-family: "Playfair Display",serif;
+      font-size: clamp(30px,3.5vw,44px);
+      line-height: 1.25;
+      margin: 0 0 15px;
+      color: var(--it-text);
+    }
+
+    .it-section-heading p {
+      color: var(--it-muted);
+      font-size: 14px;
+      line-height: 1.9;
+      margin: 0 auto 12px;
+    }
+
+    .it-divider {
+      width: 65px;
+      height: 2px;
+      margin: 20px auto 0;
+      background: linear-gradient(90deg,transparent,#b08d2f,transparent);
+    }
+
+    /* SERVICES */
+
+    .it-services {
+      padding: 25px 0 75px;
+      background: #fff;
+    }
+
+    .it-services-grid {
+      display: grid;
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .it-service-card {
+      padding: 30px 23px;
+      text-align: center;
+      border: 1px solid #e6d9b2;
+      border-radius: 17px;
+      background: linear-gradient(155deg,#fff,#fcfaf3);
+      box-shadow: 0 12px 30px rgba(176,141,47,.06);
+      transition: transform .3s,box-shadow .3s,border-color .3s;
+    }
+
+    .it-service-card:hover {
+      transform: translateY(-6px);
+      border-color: #b08d2f;
+      box-shadow: 0 18px 38px rgba(176,141,47,.13);
+    }
+
+    .it-service-icon {
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#fffdf5,#f3e6b7);
+      border: 1px solid #dfc66e;
+      color: #a17e1c;
+      font-size: 23px;
+    }
+
+    .it-service-card h3 {
+      font-family: "Playfair Display",serif;
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 0 0 12px;
+      color: #29251c;
+    }
+
+    .it-service-card p {
+      font-size: 12px;
+      line-height: 1.85;
+      color: #706a5e;
+      margin: 0;
+    }
+
+    /* BENEFITS */
+
+    .it-benefits {
+      padding: 75px 0;
+      background:
+        radial-gradient(circle at 85% 20%,rgba(201,162,39,.08),transparent 35%),
+        #faf9f5;
+    }
+
+    .it-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .it-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid #e8ddbf;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(176,141,47,.04);
+      transition: transform .3s,border-color .3s;
+    }
+
+    .it-benefit:hover {
+      transform: translateY(-4px);
+      border-color: #c9a227;
+    }
+
+    .it-benefit-icon {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: linear-gradient(135deg,#fffaf0,#f3e7bc);
+      border: 1px solid #e1cb86;
+      color: #a17e1c;
+      font-size: 18px;
+    }
+
+    .it-benefit h3 {
+      font-family: "Playfair Display",serif;
+      font-size: 19px;
+      margin: 0 0 8px;
+      color: #29251c;
+    }
+
+    .it-benefit p {
+      color: var(--it-muted);
+      font-size: 12px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* CONSULTATION */
+
+    .it-consultation {
+      padding: 75px 0;
+      background: #fff;
+    }
+
+    .it-consultation-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .it-consultation-copy h2 {
+      font-family: "Playfair Display",serif;
+      font-size: clamp(30px,3vw,44px);
+      line-height: 1.25;
+      margin: 0 0 18px;
+      color: #29251c;
+    }
+
+    .it-consultation-copy > p {
+      color: var(--it-muted);
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 25px;
+    }
+
+    .it-contact-details {
+      display: grid;
+      gap: 16px;
+    }
+
+    .it-contact-details a,
+    .it-contact-details div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #50493c;
+      font-size: 13px;
+    }
+
+    .it-contact-details i {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      background: #f8f1d7;
+      color: #a17e1c;
+      border: 1px solid #eadba7;
+      border-radius: 50%;
+    }
+
+    /* FORM */
+
+    .it-form-card {
+      padding: 30px;
+      border: 1px solid #e6d8a9;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 18px 45px rgba(176,141,47,.08);
+    }
+
+    .it-form-card h3 {
+      font-family: "Playfair Display",serif;
+      font-size: 25px;
+      margin: 0 0 7px;
+      color: #29251c;
+    }
+
+    .it-form-card > p {
+      color: #777;
+      font-size: 12px;
+      margin: 0 0 22px;
+    }
+
+    .it-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 5px;
+      background: #f4f0e4;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .it-tab {
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      padding: 11px 8px;
+      color: #706a5e;
+      font: 700 12px "Inter",sans-serif;
+      cursor: pointer;
+    }
+
+    .it-tab.active {
+      background: #fff;
+      color: #a17e1c;
+      box-shadow: 0 3px 12px rgba(176,141,47,.12);
+    }
+
+    .it-tab-panel {
+      display: none;
+    }
+
+    .it-tab-panel.active:not([hidden]) {
+      display: block;
+    }
+
+    .it-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .it-field {
+      margin-bottom: 14px;
+    }
+
+    .it-field label {
+      display: block;
+      color: #50493c;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    .it-field input,
+    .it-field textarea {
+      width: 100%;
+      padding: 12px 13px;
+      background: #fff;
+      border: 1px solid #e6dfcb;
+      border-radius: 8px;
+      outline: none;
+      font: 12px "Inter",sans-serif;
+      color: #29251c;
+    }
+
+    .it-field textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .it-field input:focus,
+    .it-field textarea:focus {
+      border-color: #b08d2f;
+      box-shadow: 0 0 0 3px rgba(201,162,39,.12);
+    }
+
+    .it-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: #706a5e;
+      font-size: 11px;
+      line-height: 1.6;
+      margin: 3px 0 17px;
+    }
+
+    .it-consent input {
+      margin-top: 3px;
+      accent-color: #b08d2f;
+    }
+
+    .it-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: linear-gradient(135deg,#e2c763,#b08d2f);
+      color: #29251c;
+      border: none;
+      border-radius: 9px;
+      font: 700 12px "Inter",sans-serif;
+      cursor: pointer;
+      transition: transform .25s,box-shadow .25s;
+    }
+
+    .it-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(176,141,47,.2);
+    }
+
+    .it-button:disabled {
+      opacity: .65;
+      cursor: not-allowed;
+    }
+
+    .it-button-full {
+      width: 100%;
+    }
+
+    .it-calendly-panel {
+      padding: 25px 10px;
+      text-align: center;
+    }
+
+    .it-calendly-panel > i {
+      font-size: 35px;
+      color: #b08d2f;
+    }
+
+    .it-calendly-panel p {
+      color: #706a5e;
+      font-size: 13px;
+      line-height: 1.8;
+      margin: 18px 0 22px;
+    }
+
+    #itFormStatus {
+      font-size: 12px;
+      margin: 12px 0 0;
+      text-align: center;
     }
 
     /* FAQ */
-    .faqWrap{ padding: 10px 26px 26px; }
-    .faqTitle{
-      font-family: var(--font-display);
-      font-size: clamp(26px, 2.4vw, 38px);
-      margin: 0 0 14px;
-    }
-    .faqItem{
-      border: 1px solid rgba(15,23,42,.12);
-      border-radius: 16px;
-      overflow:hidden;
-      margin-bottom: 10px;
-      background:#fff;
-    }
-    .faqQ{
-      width:100%;
-      display:flex;
-      justify-content:space-between;
-      gap: 12px;
-      padding: 14px 14px;
-      background: rgba(176,141,47,.06);
-      border: none;
-      cursor:pointer;
-      font-weight: 900;
-      color: rgba(15,23,42,.90);
-      text-align:left;
-      font-family: var(--font-body);
-    }
-    .faqA{
-      display:none;
-      padding: 14px 14px;
-      color: rgba(15,23,42,.75);
-      line-height: 1.8;
-      border-top: 1px solid rgba(15,23,42,.10);
-    }
-    .faqItem.open .faqA{ display:block; }
 
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: 1fr; }
-      .side{ position: static; top:auto; }
-      body{ padding-top: 78px; }
+    .it-faq {
+      background: #faf9f5;
+      padding: 75px 0;
+    }
+
+    .it-faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .it-faq-item {
+      background: #fff;
+      border: 1px solid #e8ddbf;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .it-faq-item:hover {
+      border-color: #c9a227;
+    }
+
+    .it-faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 19px 22px;
+      background: transparent;
+      border: 0;
+      color: #29251c;
+      font: 700 13px "Inter",sans-serif;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .it-faq-question i {
+      color: #b08d2f;
+      transition: transform .25s;
+    }
+
+    .it-faq-answer {
+      display: none;
+      padding: 0 22px 20px;
+      color: #706a5e;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .it-faq-item.open .it-faq-answer {
+      display: block;
+    }
+
+    .it-faq-item.open .it-faq-question i {
+      transform: rotate(45deg);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
+      .it-services-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+
+      .it-consultation-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .it-hero {
+        padding: 60px 20px;
+      }
+
+      .it-intro {
+        padding: 50px 0 20px;
+      }
+
+      .it-services {
+        padding: 20px 0 55px;
+      }
+
+      .it-benefits,
+      .it-consultation,
+      .it-faq {
+        padding: 55px 0;
+      }
+
+      .it-benefits-grid,
+      .it-consultation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .it-consultation-copy {
+        text-align: center;
+      }
+
+      .it-contact-details a,
+      .it-contact-details div {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .it-container {
+        width: calc(100% - 30px);
+      }
+
+      .it-services-grid,
+      .it-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .it-service-card {
+        padding: 25px 20px;
+      }
+
+      .it-form-card {
+        padding: 22px 18px;
+      }
+
+      .it-benefit {
+        padding: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .it-page *,
+      .it-page *::before,
+      .it-page *::after {
+        transition: none !important;
+        animation: none !important;
+      }
     }
   </style>
 </head>
 
-<body>
+<body id="top">
 
-  <!-- ✅ Navbar loads here -->
+  <!-- SHARED NAVBAR -->
   <div id="navbarMount"></div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero__inner">
-        <h1 class="hero__title">Business Tax</h1>
-        <div class="crumbs">
+  <main class="it-page">
+
+    <!-- HERO -->
+    <section class="it-hero">
+      <div class="it-container">
+
+        <span class="it-eyebrow">
+          NASH TAX &amp; BOOKKEEPING
+        </span>
+
+        <h1>
+          Professional <span>Business Tax Services.</span>
+        </h1>
+
+        <p class="it-hero-description">
+          Simplify your business tax obligations with accurate
+          preparation, proactive planning and dependable
+          guidance designed to keep your business compliant
+          and financially confident.
+        </p>
+
+        <nav class="it-breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Home</a>
-          <span class="sep">›</span>
-          <a href="services.html">Services</a>
-          <span class="sep">›</span>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="service.html">Services</a>
+          <i class="fa-solid fa-chevron-right"></i>
           <span>Business Tax</span>
+        </nav>
+
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="it-intro">
+      <div class="it-container">
+
+        <div class="it-section-heading">
+
+          <span class="it-eyebrow">
+            YOUR PARTNER IN TAX EXCELLENCE
+          </span>
+
+          <h2>
+            Smarter Tax Solutions for
+            <span>Your Business.</span>
+          </h2>
+
+          <p>
+            Managing business tax obligations can be complex.
+            At Nash Tax &amp; Bookkeeping, we help businesses
+            stay compliant, reduce risk and plan ahead with
+            confidence.
+          </p>
+
+          <p>
+            From tax preparation and filing to forward-looking
+            planning, we make the process clear and structured
+            so you can focus on growing your business.
+          </p>
+
+          <div class="it-divider"></div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTENT -->
-  <section class="page">
-    <div class="container">
-      <div class="grid">
+    <!-- BUSINESS TAX SERVICES -->
+    <section class="it-services">
+      <div class="it-container">
 
-        <!-- LEFT -->
-        <div class="card">
-          <div class="content">
-            <h2>Your Partner in Tax Excellence</h2>
+        <div class="it-services-grid">
+
+          <article class="it-service-card">
+            <div class="it-service-icon">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+
+            <h3>Business Tax Preparation</h3>
+
             <p>
-              Managing business tax obligations can be complex. At Nash Tax &amp; Bookkeeping, we help businesses stay compliant,
-              reduce risk, and plan ahead with confidence.
+              Accurate, on-time tax filing with
+              the required schedules and forms
+              to support your business compliance.
             </p>
+          </article>
+
+          <article class="it-service-card">
+            <div class="it-service-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Tax Planning</h3>
+
             <p>
-              From filings to forward planning, we make the process clear and structured—so you can focus on growing your business.
+              Forward-looking tax strategies
+              to help manage liabilities,
+              strengthen cash flow and plan ahead.
+            </p>
+          </article>
+
+          <article class="it-service-card">
+            <div class="it-service-icon">
+              <i class="fa-solid fa-building"></i>
+            </div>
+
+            <h3>Entity Selection</h3>
+
+            <p>
+              Guidance in choosing a suitable
+              business structure with your
+              tax obligations and long-term goals in mind.
+            </p>
+          </article>
+
+          <article class="it-service-card">
+            <div class="it-service-icon">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+
+            <h3>IRS Representation</h3>
+
+            <p>
+              Support with IRS notices,
+              audits and tax disputes to help
+              protect your business interests.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE NASH TAX -->
+    <section class="it-benefits">
+      <div class="it-container">
+
+        <div class="it-section-heading">
+          <span class="it-eyebrow">
+            WHY CHOOSE NASH TAX
+          </span>
+
+          <h2>
+            Confidence Behind
+            <span>Every Business Decision.</span>
+          </h2>
+
+          <p>
+            Reliable tax support, personalized guidance
+            and practical strategies designed around
+            your business needs.
+          </p>
+        </div>
+
+        <div class="it-benefits-grid">
+
+          <article class="it-benefit">
+            <div class="it-benefit-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+
+            <div>
+              <h3>Experience &amp; Expertise</h3>
+              <p>
+                Our seasoned experts offer a wealth
+                of knowledge to guide your
+                financial decisions.
+              </p>
+            </div>
+          </article>
+
+          <article class="it-benefit">
+            <div class="it-benefit-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+              <h3>Reliable &amp; Efficient</h3>
+              <p>
+                We deliver dependable and accurate
+                financial services for your
+                peace of mind.
+              </p>
+            </div>
+          </article>
+
+          <article class="it-benefit">
+            <div class="it-benefit-icon">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+
+            <div>
+              <h3>Tailored Services</h3>
+              <p>
+                Customized strategies designed
+                specifically for your financial
+                needs and business goals.
+              </p>
+            </div>
+          </article>
+
+          <article class="it-benefit">
+            <div class="it-benefit-icon">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+
+            <div>
+              <h3>Effective Services</h3>
+              <p>
+                Smart solutions that save you time
+                and optimize your financial outcomes.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONSULTATION -->
+    <section class="it-consultation" id="consultation">
+      <div class="it-container">
+
+        <div class="it-consultation-grid">
+
+          <!-- CONTACT INFORMATION -->
+          <div class="it-consultation-copy">
+
+            <span class="it-eyebrow">
+              LET'S WORK TOGETHER
+            </span>
+
+            <h2>
+              Let's Simplify Your
+              <span>Business Taxes.</span>
+            </h2>
+
+            <p>
+              Whether you need assistance with business
+              tax preparation, strategic planning or
+              understanding your tax obligations,
+              our team is here to help you move forward
+              with confidence.
             </p>
 
-            <ul class="featureList">
-              <li class="feature">
-                <div class="dot"></div>
-                <div>
-                  <strong>Business Tax Preparation</strong>
-                  <span>Accurate, on-time filing with required schedules and forms.</span>
-                </div>
-              </li>
-              <li class="feature">
-                <div class="dot"></div>
-                <div>
-                  <strong>Tax Planning</strong>
-                  <span>Forward strategies to reduce liabilities and strengthen cash flow.</span>
-                </div>
-              </li>
-              <li class="feature">
-                <div class="dot"></div>
-                <div>
-                  <strong>Entity Selection</strong>
-                  <span>Guidance to choose the right structure for long-term savings.</span>
-                </div>
-              </li>
-              <li class="feature">
-                <div class="dot"></div>
-                <div>
-                  <strong>IRS Representation</strong>
-                  <span>Support for audits, notices, and disputes—protecting your interests.</span>
-                </div>
-              </li>
-            </ul>
+            <div class="it-contact-details">
 
-            <div class="inlineImg">
-              <img src="assests/img/bbb.jpg" alt="Business tax consultation">
+              <a href="tel:+19144134870">
+                <i class="fa-solid fa-phone"></i>
+                +1 (914) 413-4870
+              </a>
+
+              <a href="mailto:tax@nashtaxes.com">
+                <i class="fa-solid fa-envelope"></i>
+                tax@nashtaxes.com
+              </a>
+
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                Dallas, TX | Remote-friendly
+              </div>
+
             </div>
           </div>
-<div class="container">
-    <div class="whyGrid">
 
-      <div class="whyBox">
-        <h3>Experience & Expertise</h3>
-        <p>Our seasoned experts offer a wealth of knowledge to guide your financial decisions.</p>
-      </div>
+          <!-- CONTACT FORM -->
+          <div class="it-form-card">
 
-      <div class="whyBox">
-        <h3>Reliable & Efficient</h3>
-        <p>We deliver dependable and accurate financial services for your peace of mind.</p>
-      </div>
+            <h3>Let's Get Started</h3>
+            <p>Choose how you'd like to connect with us.</p>
 
-      <div class="whyBox">
-        <h3>Tailored Services</h3>
-        <p>Customized strategies designed specifically for your financial needs.</p>
-      </div>
+            <div class="it-tabs" role="tablist" aria-label="Contact options">
 
-      <div class="whyBox">
-        <h3>Effective Services</h3>
-        <p>Smart solutions that save you time and optimize your financial outcomes.</p>
-      </div>
-
-    </div>
-  </div>
-          <!-- FAQ -->
-          <div class="faqWrap">
-            <h3 class="faqTitle">Frequently Asked Questions</h3>
-
-            <div class="faqItem open">
-              <button class="faqQ" type="button">
-                Do you provide a consultation for free?
-                <span>—</span>
+              <button
+                class="it-tab active"
+                type="button"
+                id="itEmailTab"
+                role="tab"
+                aria-selected="true"
+                aria-controls="itEmailPanel"
+                data-panel="itEmailPanel">
+                <i class="fa-regular fa-envelope"></i>
+                Send a Message
               </button>
-              <div class="faqA">
-                Yes. We can start with a short consultation to understand your needs and recommend the best next steps.
-              </div>
+
+              <button
+                class="it-tab"
+                type="button"
+                id="itCalendlyTab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="itCalendlyPanel"
+                data-panel="itCalendlyPanel">
+                <i class="fa-regular fa-calendar"></i>
+                Book a Call
+              </button>
+
             </div>
 
-            <div class="faqItem">
-              <button class="faqQ" type="button">
-                Can you assist with both individuals and businesses?
-                <span>+</span>
-              </button>
-              <div class="faqA">
-                Yes. We support individuals and business owners with tax, bookkeeping, payroll, and planning services.
-              </div>
+            <!-- EMAIL FORM -->
+            <div
+              class="it-tab-panel active"
+              id="itEmailPanel"
+              role="tabpanel"
+              aria-labelledby="itEmailTab">
+
+              <form id="itContactForm">
+
+                <div class="it-form-row">
+
+                  <div class="it-field">
+                    <label for="itName">Full Name</label>
+                    <input
+                      id="itName"
+                      name="name"
+                      type="text"
+                      placeholder="Your name"
+                      required>
+                  </div>
+
+                  <div class="it-field">
+                    <label for="itPhone">Phone</label>
+                    <input
+                      id="itPhone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+1 ...">
+                  </div>
+
+                </div>
+
+                <div class="it-field">
+                  <label for="itEmail">Email Address</label>
+                  <input
+                    id="itEmail"
+                    name="email"
+                    type="email"
+                    placeholder="you@email.com"
+                    required>
+                </div>
+
+                <div class="it-field">
+                  <label for="itCompany">Business Name</label>
+                  <input
+                    id="itCompany"
+                    name="company"
+                    type="text"
+                    placeholder="Your business name">
+                </div>
+
+                <div class="it-field">
+                  <label for="itMessage">Your Message</label>
+                  <textarea
+                    id="itMessage"
+                    name="message"
+                    placeholder="Tell us about your business tax needs..."
+                    required></textarea>
+                </div>
+
+                <label class="it-consent">
+                  <input type="checkbox" name="marketing_consent">
+                  <span>
+                    I agree to receive optional updates
+                    from Nash Tax via SMS or email.
+                  </span>
+                </label>
+
+                <button
+                  type="submit"
+                  class="it-button it-button-full"
+                  id="itSendBtn">
+                  Send Inquiry
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p
+                  id="itFormStatus"
+                  role="status"
+                  aria-live="polite"></p>
+
+              </form>
             </div>
 
-            <div class="faqItem">
-              <button class="faqQ" type="button">
-                Do you provide virtual or remote services?
-                <span>+</span>
-              </button>
-              <div class="faqA">
-                Yes—remote consultations and secure online document sharing are available for your convenience.
-              </div>
-            </div>
+            <!-- CALENDLY -->
+            <div
+              class="it-tab-panel"
+              id="itCalendlyPanel"
+              role="tabpanel"
+              aria-labelledby="itCalendlyTab"
+              hidden>
 
-            <div class="faqItem">
-              <button class="faqQ" type="button">
-                What is the process to get started?
-                <span>+</span>
-              </button>
-              <div class="faqA">
-                Contact us via the form or phone/email. We’ll arrange a quick call, collect required documents,
-                and then proceed with a clear timeline.
+              <div class="it-calendly-panel">
+
+                <i class="fa-regular fa-calendar-check"></i>
+
+                <p>
+                  Schedule a convenient time to discuss
+                  your business tax requirements
+                  with our team.
+                </p>
+
+                <a
+                  href="https://calendly.com/tax-nashath/new-meeting"
+                  class="it-button it-button-full"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Book a Calendly Appointment
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
               </div>
             </div>
 
           </div>
         </div>
 
-        <!-- RIGHT -->
-        <aside class="card side">
-  <div class="sideHead">Let’s Get Started</div>
+      </div>
+    </section>
 
-  <div class="contactTabs">
-    <button type="button" class="tabBtn active" data-tab="email">Email Form</button>
-    <button type="button" class="tabBtn" data-tab="calendly">Calendly</button>
-  </div>
+    <!-- FAQ -->
+    <section class="it-faq">
+      <div class="it-container">
 
-  <div class="sideBody">
+        <div class="it-section-heading">
+          <span class="it-eyebrow">HAVE QUESTIONS?</span>
 
-    <!-- EMAIL FORM -->
-    <div class="tabPanel active" id="emailPanel">
-      <form action="#" method="post">
-        <div class="fRow">
-          <input class="inp" type="text" name="name" placeholder="Name" required>
-          <input class="inp" type="email" name="email" placeholder="Email" required>
+          <h2>
+            Frequently Asked
+            <span>Questions.</span>
+          </h2>
+
+          <p>
+            Answers to common questions about
+            our business tax services.
+          </p>
         </div>
 
-        <div class="fRow" style="margin-top:10px;">
-          <input class="inp" type="text" name="phone" placeholder="Phone">
-          <input class="inp" type="text" name="company" placeholder="Business Name">
+        <div class="it-faq-list">
+
+          <div class="it-faq-item open">
+            <button
+              class="it-faq-question"
+              type="button"
+              aria-expanded="true">
+              Do you provide a consultation for free?
+              <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="it-faq-answer">
+              Yes. We can start with a short consultation
+              to understand your needs and recommend
+              the best next steps.
+            </div>
+          </div>
+
+          <div class="it-faq-item">
+            <button
+              class="it-faq-question"
+              type="button"
+              aria-expanded="false">
+              Can you assist with both individuals and businesses?
+              <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="it-faq-answer">
+              Yes. We support individuals and business
+              owners with tax, bookkeeping, payroll
+              and planning services.
+            </div>
+          </div>
+
+          <div class="it-faq-item">
+            <button
+              class="it-faq-question"
+              type="button"
+              aria-expanded="false">
+              Do you provide virtual or remote services?
+              <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="it-faq-answer">
+              Yes. Remote consultations and secure
+              online document sharing are available
+              for your convenience.
+            </div>
+          </div>
+
+          <div class="it-faq-item">
+            <button
+              class="it-faq-question"
+              type="button"
+              aria-expanded="false">
+              What is the process to get started?
+              <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <div class="it-faq-answer">
+              Contact us via the form, phone or email.
+              We'll arrange a call, collect the required
+              documents and proceed with a clear timeline.
+            </div>
+          </div>
+
         </div>
 
-        <textarea class="inp" name="message" placeholder="Message" style="margin-top:10px;"></textarea>
+      </div>
+    </section>
 
-        <label class="check">
-          <input type="checkbox" />
-          <span>I agree to receive updates from Nash via SMS/Email</span>
-        </label>
+  </main>
 
-        <button class="btn" type="submit">Send</button>
-      </form>
-    </div>
+  <!-- SHARED FOOTER -->
+  <footer class="pFooter" id="footer">
 
-    <!-- CALENDLY -->
-    <div class="tabPanel" id="calendlyPanel">
-      <p class="calendlyText">
-        Choose a convenient time for your free consultation.
-      </p>
+    <div class="pFooter__inner">
 
-      <a
-        class="btn calendlyBtn"
-        href="https://calendly.com/tax-nashath/new-meeting?back=1&month=2026-06"
-        target="_blank"
-        rel="noopener">
-        Book via Calendly
-      </a>
-    </div>
+      <!-- BRAND -->
+      <div class="pFooter__brand">
 
-    <div class="contactBlock">
-      <div class="cItem">
-        <div class="cBadge">📞</div>
-        <div>+1 914 413 4870</div>
+        <a href="index.html" class="pFooter__logoWrap">
+          <img
+            src="assests/img/llogo.png"
+            alt="Nash Tax &amp; Bookkeeping"
+            class="pFooter__logo">
+        </a>
+
+        <div class="pFooter__socialIcons">
+
+          <a
+            href="https://www.instagram.com/nash_tax_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61588369831428"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a
+            href="https://wa.me/19144134870"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+        </div>
       </div>
 
-      <div class="cItem">
-        <div class="cBadge">✉️</div>
-        <div>tax@nashtaxes.com</div>
+      <!-- QUICK LINKS -->
+      <div class="pFooter__col">
+        <h3 class="pFooter__title">Quick Links</h3>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms &amp; Privacy</a>
       </div>
 
-      <div class="cItem">
-        <div class="cBadge">📍</div>
-        <div>Dallas, TX</div>
+      <!-- SERVICES -->
+      <div class="pFooter__col">
+        <h3 class="pFooter__title">Our Services</h3>
+
+        <a href="individual.html">Individual Tax</a>
+        <a href="businesstax.html">Business Tax</a>
+        <a href="bookkeeping.html">Bookkeeping</a>
+        <a href="payroll.html">Payroll</a>
+        <a href="business-formation.html">Business Formation</a>
+        <a href="tax-planning.html">Tax Planning</a>
       </div>
+
+      <!-- CONTACT -->
+      <div class="pFooter__contact">
+        <h3 class="pFooter__title">Contact Us</h3>
+
+        <div class="pFooter__contactItem">
+          <span class="pFooter__contactIcon">
+            <i class="fa-solid fa-phone"></i>
+          </span>
+
+          <a href="tel:+19144134870">
+            +1 (914) 413 4870
+          </a>
+        </div>
+
+        <div class="pFooter__contactItem">
+          <span class="pFooter__contactIcon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+
+          <a href="mailto:tax@nashtaxes.com">
+            tax@nashtaxes.com
+          </a>
+        </div>
+
+        <div class="pFooter__contactItem">
+          <span class="pFooter__contactIcon">
+            <i class="fa-solid fa-location-dot"></i>
+          </span>
+
+          <span>
+            Dallas, TX
+            <small>Remote-friendly</small>
+          </span>
+        </div>
+
+        <div class="pFooter__contactItem">
+          <span class="pFooter__contactIcon">
+            <i class="fa-regular fa-clock"></i>
+          </span>
+
+          <span>
+            Mon – Fri: 9AM – 6PM
+            <small>Eastern Time</small>
+          </span>
+        </div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="pFooter__newsletter">
+
+        <h3 class="pFooter__title">
+          Subscribe for Updates
+        </h3>
+
+        <p>
+          Get tax tips, deadlines and business
+          insights delivered to your inbox.
+        </p>
+
+        <form
+          class="pFooter__subscribe"
+          id="footerSubscribeForm">
+
+          <label for="footerEmail" class="pFooter__srOnly">
+            Email address
+          </label>
+
+          <input
+            type="email"
+            id="footerEmail"
+            name="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required>
+
+          <button type="submit" aria-label="Subscribe">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+        </form>
+
+        <p
+          class="pFooter__formStatus"
+          id="footerSubscribeStatus"
+          role="status"
+          aria-live="polite"></p>
+
+      </div>
+
     </div>
 
-  </div>
-</aside>
+    <!-- FOOTER BOTTOM -->
+    <div class="pFooter__bottom">
 
+      <span>
+        © 2026 Nash Tax &amp; Bookkeeping.
+        All rights reserved.
+      </span>
+
+      <div class="pFooter__bottomLinks">
+        <a href="terms.html">Terms of Service</a>
+        <a href="terms.html">Privacy Policy</a>
+        <a href="#top" class="pFooter__top">Back to top ↑</a>
       </div>
-    </div>
-  </section>
 
-  <!-- ✅ Navbar loader (same as other page) -->
+    </div>
+
+  </footer>
+
+  <!-- SHARED SCRIPTS -->
   <script src="assests/js/navbar.js" defer></script>
+  <script src="assests/js/scroll-animation.js" defer></script>
+
+  <!-- EMAILJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <script>
-    // FAQ accordion (same behavior)
-    document.querySelectorAll(".faqItem .faqQ").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const item = btn.closest(".faqItem");
-        const open = item.classList.toggle("open");
-        btn.querySelector("span").textContent = open ? "—" : "+";
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* CONTACT TABS */
+
+      const tabs = document.querySelectorAll(".it-tab");
+      const panels = document.querySelectorAll(".it-tab-panel");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+
+          tabs.forEach(t => {
+            t.classList.remove("active");
+            t.setAttribute("aria-selected", "false");
+          });
+
+          panels.forEach(panel => {
+            panel.classList.remove("active");
+            panel.hidden = true;
+          });
+
+          tab.classList.add("active");
+          tab.setAttribute("aria-selected", "true");
+
+          const panel = document.getElementById(tab.dataset.panel);
+
+          if (panel) {
+            panel.hidden = false;
+            panel.classList.add("active");
+          }
+        });
       });
+
+      /* FAQ ACCORDION */
+
+      document.querySelectorAll(".it-faq-question").forEach(btn => {
+        btn.addEventListener("click", () => {
+
+          const item = btn.closest(".it-faq-item");
+          const open = item.classList.toggle("open");
+
+          btn.setAttribute("aria-expanded", String(open));
+        });
+      });
+
+      /* EMAILJS FORM */
+
+      const form = document.getElementById("itContactForm");
+      const sendBtn = document.getElementById("itSendBtn");
+      const status = document.getElementById("itFormStatus");
+
+      if (form) {
+
+        if (window.emailjs) {
+          emailjs.init("235c8bmBpiRQBYNTD");
+        }
+
+        let sending = false;
+
+        form.addEventListener("submit", async e => {
+          e.preventDefault();
+
+          if (sending || !form.reportValidity()) return;
+
+          if (!window.emailjs) {
+            status.textContent =
+              "The contact service is unavailable. Please email tax@nashtaxes.com.";
+            status.style.color = "#b42318";
+            return;
+          }
+
+          sending = true;
+          sendBtn.disabled = true;
+          sendBtn.textContent = "Sending...";
+          status.textContent = "Sending your message...";
+          status.style.color = "#706a5e";
+
+          const params = {
+            name: document.getElementById("itName").value.trim(),
+            email: document.getElementById("itEmail").value.trim(),
+            phone: document.getElementById("itPhone").value.trim(),
+            company: document.getElementById("itCompany").value.trim(),
+            address: "",
+            message: document.getElementById("itMessage").value.trim(),
+            title: "Business Tax Inquiry",
+            time: new Date().toLocaleString()
+          };
+
+          try {
+            await emailjs.send(
+              "service_koj0gcd",
+              "template_8zgjv7m",
+              params
+            );
+
+            status.textContent =
+              "Your message was sent successfully!";
+            status.style.color = "#287245";
+            form.reset();
+
+          } catch (error) {
+            console.error("EmailJS error:", error);
+
+            status.textContent =
+              "Unable to send. Please try again or contact us by email.";
+            status.style.color = "#b42318";
+
+          } finally {
+            sending = false;
+            sendBtn.disabled = false;
+            sendBtn.innerHTML =
+              'Send Inquiry <i class="fa-solid fa-arrow-right"></i>';
+          }
+        });
+      }
+
     });
   </script>
-  <!-- ================= FOOTER ================= -->
-   <!-- ================= FOOTER ================= -->
-<footer class="pFooter" id="footer">
-  <div class="container pFooter__inner">
 
-    <!-- Brand / Logo + Social (icons BELOW logo) -->
-    <div class="pFooter__brand">
-      <a href="index.html" class="pFooter__logoWrap">
-        <img src="assests/img/llogo.png" alt="Nash Tax & Bookkeeping Logo" class="pFooter__logo">
-      </a>
-
-      <div class="pFooter__socialIcons" aria-label="Social media links">
-        <a href="https://www.instagram.com/nash_tax_?stkn=MWk3NzR4aDB4OWI2bA%3D%3D&utm_source=qr"
-           target="_blank" rel="noopener"
-           aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="https://www.facebook.com/profile.php?id=61588369831428&mibextid=wwXIfr&rdid=trMZPBTIOBIsiyRk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19s48ntWQj%2F%3Fmibextid%3DwwXIfr#"
-           target="_blank" rel="noopener"
-           aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-
-        <a href="https://wa.me/19144134870?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20tax%20services."
-           target="_blank" rel="noopener"
-           aria-label="WhatsApp">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="pFooter__col">
-      <div class="pFooter__title">Quick Links</div>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="service.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Privacy Policy</a>
-    </div>
-
-    <div class="pFooter__col">
-      <div class="pFooter__title">What We Do</div>
-      <a href="individual.html">Individual Tax</a>
-      <a href="businesstax.html">Business Tax</a>
-      <a href="bookkeeping.html">Bookkeeping</a>
-      <a href="payroll.html">Payroll</a>
-      <a href="businessformation.html">Business Formation</a>
-    </div>
-
-    <div class="pFooter__contact">
-      <div class="pFooter__card">
-        <div class="pFooter__cardTitle">Get In Touch</div>
-
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <a href="tel:+19144134870">+1 (914) 413 4870</a>
-        </div>
-
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <a href="mailto:tax@nashtaxes.com">tax@nashtaxes.com</a>
-        </div>
-
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <span>Dallas, TX • Remote-friendly</span>
-        </div>
-
-        <a class="pFooter__cta" href="contact.html">Free Consultation</a>
-        <div class="pFooter__note">Reply within business hours (9AM–6PM)</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container pFooter__bottom">
-    <span>© 2025 Nash Tax &amp; Bookkeeping. All rights reserved.</span>
-    <a class="pFooter__top" href="#top">Back to top ↑</a>
-  </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
-</footer>
-<script>
-  document.querySelectorAll(".tabBtn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".tabBtn").forEach((b) => b.classList.remove("active"));
-      document.querySelectorAll(".tabPanel").forEach((p) => p.classList.remove("active"));
-
-      btn.classList.add("active");
-
-      if (btn.dataset.tab === "email") {
-        document.getElementById("emailPanel").classList.add("active");
-      } else {
-        document.getElementById("calendlyPanel").classList.add("active");
-      }
-    });
-  });
-</script>
 </body>
 </html>

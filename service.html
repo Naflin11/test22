@@ -1,353 +1,1291 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services — Nash Tax</title>
-  <link rel="icon" type="image/png" href="assests/img/llogo1.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google tag (gtag.js) -->
+  <title>Our Services | Nash Tax & Bookkeeping</title>
+  <meta name="description" content="Explore individual taxes, business taxes, bookkeeping, payroll, business formation and tax planning services from Nash Tax & Bookkeeping.">
+
+  <link rel="canonical" href="https://www.nashtaxes.com/service.html">
+  <link rel="icon" type="image/png" href="assests/img/llogo1.png">
+  <link rel="stylesheet" href="assests/css/scroll-animation.css">
+
+  <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956738872"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17956738872');
+    function gtag(){ dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "AW-17956738872");
   </script>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assests/css/style.css" />
-<link rel="stylesheet" href="assests/css/navbar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Existing styles -->
+  <link rel="stylesheet" href="assests/css/style.css">
+  <link rel="stylesheet" href="assests/css/navbar.css">
+  <link rel="stylesheet" href="assests/css/footer.css">
+
   <style>
-    :root{
-      --font-nav: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      --font-display: "Playfair Display", serif;
-      --text:#0b1220;
-      --gold:#b08d2f;
-      --gold2:#d8b556;
-      --shadowSoft: 0 14px 38px rgba(2,6,23,.10);
-      --max:1200px;
-    }
-    body{ font-family: var(--font-body); color:var(--text); }
-    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+    /* =====================================
+       NASH TAX PREMIUM SERVICES PAGE
+    ===================================== */
 
-    /* Hero */
-    .pageHero{
+    :root {
+      --sv-gold: #c9a227;
+      --sv-gold-dark: #a98216;
+      --sv-gold-light: #f8e9b2;
+      --sv-white: #ffffff;
+      --sv-cream: #fffdf7;
+      --sv-text: #211b0c;
+      --sv-muted: #726c5c;
+      --sv-serif: "Playfair Display", Georgia, serif;
+      --sv-sans: "Inter", Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--sv-white);
+    }
+
+    .sv-page,
+    .sv-page * {
+      box-sizing: border-box;
+    }
+
+    .sv-page {
+      font-family: var(--sv-sans);
+      color: var(--sv-text);
+    }
+
+    .sv-container {
+      width: min(1320px, calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .sv-hero {
       position: relative;
-      min-height: 340px;
-      display:flex;
-      align-items:center;
-      overflow:hidden;
-      background:#0b1220;
-    }
-    .pageHero__bg{
-      position:absolute; inset:0;
-      background: url("assests/img/aa.jpg") center/cover no-repeat;
-      filter: saturate(1.02) contrast(1.02);
-      transform: scale(1.03);
-    }
-    .pageHero::after{
-      content:""; position:absolute; inset:0;
+      overflow: hidden;
+      text-align: center;
+      padding: 112px 24px 90px;
       background:
-        radial-gradient(900px 380px at 20% 30%, rgba(0,0,0,.25), rgba(0,0,0,.70)),
-        linear-gradient(90deg, rgba(0,0,0,.70), rgba(0,0,0,.35));
+        radial-gradient(circle at 10% 45%, rgba(201,162,39,.10), transparent 28%),
+        radial-gradient(circle at 90% 35%, rgba(201,162,39,.10), transparent 30%),
+        linear-gradient(180deg, #fff, #fffdf7);
     }
-    .pageHero__inner{
-      position:relative; z-index:2;
-      padding:60px 0; color:#fff; text-align:center;
-    }
-    .pageHero__title{
-      font-family: var(--font-display);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0 0 10px;
-      font-size: clamp(34px, 4vw, 52px);
-    }
-    .crumbs{
-      display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
-      color: rgba(255,255,255,.85);
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .crumbs a{ color: rgba(255,255,255,.90); }
-    .crumbs .sep{ opacity:.65; }
 
-    /* Services list */
-    .servicesWrap{ padding: 70px 0 30px; background:#fff; }
-    .serviceRow{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 38px;
-      align-items:center;
-      padding: 44px 0;
-      border-bottom: 1px solid rgba(15,23,42,.08);
+    .sv-hero::before,
+    .sv-hero::after {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border: 1px solid rgba(201,162,39,.18);
+      border-radius: 50%;
+      pointer-events: none;
     }
-    .serviceRow:last-child{ border-bottom:none; }
-    .serviceRow.reverse{ grid-template-columns: .95fr 1.05fr; }
-    .serviceCardImg{
+
+    .sv-hero::before {
+      left: -250px;
+      top: 30px;
+    }
+
+    .sv-hero::after {
+      right: -250px;
+      bottom: -100px;
+    }
+
+    .sv-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--sv-gold-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .sv-eyebrow::before,
+    .sv-eyebrow::after {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--sv-gold);
+    }
+
+    .sv-hero h1 {
+      max-width: 1050px;
+      margin: 24px auto;
+      font-family: var(--sv-serif);
+      font-size: clamp(43px, 5.4vw, 78px);
+      line-height: 1.17;
+      letter-spacing: -2px;
+      color: #181407;
+    }
+
+    .sv-hero h1 span {
+      display: block;
+      color: var(--sv-gold);
+    }
+
+    .sv-hero p {
+      max-width: 740px;
+      margin: 0 auto;
+      color: var(--sv-muted);
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.9;
+    }
+
+    .sv-hero-line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
+      color: var(--sv-gold);
+    }
+
+    .sv-hero-line::before,
+    .sv-hero-line::after {
+      content: "";
+      width: 55px;
+      height: 1px;
+      background: rgba(201,162,39,.55);
+    }
+
+    /* =====================================
+       SERVICES GRID
+    ===================================== */
+
+    .sv-services {
+      padding: 55px 0 125px;
+      background: var(--sv-white);
+    }
+
+    .sv-section-heading {
+      text-align: center;
+      margin-bottom: 62px;
+    }
+
+    .sv-section-heading h2 {
+      margin: 14px 0 12px;
+      font-family: var(--sv-serif);
+      font-size: clamp(31px, 3.5vw, 48px);
+      line-height: 1.25;
+      color: #211b0c;
+    }
+
+    .sv-section-heading h2 span {
+      color: var(--sv-gold);
+    }
+
+    .sv-section-heading p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--sv-muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .sv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    /* =====================================
+       INTERACTIVE SERVICE CARDS
+    ===================================== */
+
+    .sv-card {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      min-height: 450px;
+      overflow: hidden;
+      border-radius: 27px;
+      border: 1px solid rgba(201,162,39,.26);
+      background: #fff;
+      box-shadow: 0 18px 50px rgba(83,64,12,.07);
+      transition:
+        transform .45s cubic-bezier(.22,1,.36,1),
+        box-shadow .45s ease,
+        border-color .45s ease;
+    }
+
+    .sv-card:hover,
+    .sv-card:focus-within {
+      transform: translateY(-10px);
+      border-color: var(--sv-gold);
+      box-shadow: 0 28px 65px rgba(126,94,15,.17);
+    }
+
+    .sv-card-top {
+      position: relative;
+      z-index: 2;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px 20px;
+      background: #fff;
+    }
+
+    .sv-icon {
+      display: grid;
+      place-items: center;
+      width: 72px;
+      height: 72px;
+      margin-bottom: 18px;
       border-radius: 22px;
-      overflow:hidden;
-      box-shadow: var(--shadowSoft);
-      border: 1px solid rgba(15,23,42,.10);
-      background:#fff;
+      border: 1px solid rgba(201,162,39,.26);
+      background: linear-gradient(145deg, #fffdf6, #f9edc9);
+      color: var(--sv-gold-dark);
+      font-size: 29px;
+      transition: transform .45s ease;
     }
-    .serviceCardImg img{ width:100%; height:auto; display:block; }
 
-    .serviceCopy h2{
-      font-family: var(--font-display);
-      font-size: clamp(28px, 3vw, 44px);
-      margin: 0 0 10px;
+    .sv-card:hover .sv-icon {
+      transform: translateY(-5px) rotate(-5deg);
     }
-    .serviceCopy p{
-      margin:0 0 16px;
-      color: rgba(15,23,42,.78);
-      line-height: 1.85;
-      max-width: 560px;
+
+    .sv-card-top h3 {
+      margin: 0;
+      font-family: var(--sv-serif);
+      font-size: clamp(23px, 2vw, 29px);
+      font-weight: 700;
+      color: #201a0c;
     }
-    .learnMore{
-      display:inline-flex; align-items:center; gap:10px;
-      font-weight: 900; color: var(--gold);
+
+    .sv-card-number {
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--sv-gold-dark);
     }
-    .learnMore .dot{
-      width:22px;height:22px;border-radius:999px;
-      border:1px solid rgba(176,141,47,.55);
-      display:grid;place-items:center;
+
+    /* Gold wave section */
+
+    .sv-card-bottom {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 54px 28px 28px;
+      background: linear-gradient(
+        145deg,
+        #f2d778 0%,
+        #c9a227 55%,
+        #a98216 100%
+      );
+      transition: background .35s ease;
+    }
+
+    .sv-card-bottom::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: -8%;
+      top: -32px;
+      width: 116%;
+      height: 70px;
+      border-radius: 45% 55% 48% 52% / 65% 60% 40% 35%;
+      background: #fff;
+      transform: rotate(-2deg);
+      transition: transform .45s ease;
+    }
+
+    .sv-card:hover .sv-card-bottom::before {
+      transform: translateY(-10px) rotate(2deg);
+    }
+
+    .sv-card-bottom::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.12),
+        transparent 60%
+      );
+      pointer-events: none;
+    }
+
+    .sv-card-summary {
+      position: relative;
+      z-index: 2;
+      min-height: 76px;
+      margin: 0 0 20px;
+      color: #2b220d;
+      font-size: 14px;
+      line-height: 1.75;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .sv-card-link {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 17px;
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 12px;
+      background: rgba(255,255,255,.93);
+      color: #2b2109;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+    }
+
+    .sv-card-link:hover {
+      background: #fff;
+      color: var(--sv-gold-dark);
+      transform: translateY(-2px);
+    }
+
+    .sv-card-link i {
+      transition: transform .3s ease;
+    }
+
+    .sv-card-link:hover i {
+      transform: translate(3px, -3px);
+    }
+
+    /* =====================================
+       EXPANDABLE DETAILS ON HOVER
+    ===================================== */
+
+    .sv-card-details {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transition:
+        grid-template-rows .45s ease,
+        opacity .35s ease;
+    }
+
+    .sv-card-details-inner {
+      overflow: hidden;
+    }
+
+    .sv-card:hover .sv-card-details,
+    .sv-card:focus-within .sv-card-details {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+
+    .sv-card-details ul {
+      list-style: none;
+      padding: 0 0 15px;
+      margin: 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    .sv-card-details li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #30260e;
+    }
+
+    .sv-card-details li i {
+      color: #fff;
       font-size: 12px;
     }
 
-    /* CTA strip */
-    .ctaStrip{
-      margin-top: 40px;
-      padding: 54px 0;
+    /* =====================================
+       CTA
+    ===================================== */
+
+    .sv-cta {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 24px;
+      text-align: center;
       background:
-        radial-gradient(900px 340px at 20% 30%, rgba(255,255,255,.12), rgba(0,0,0,.70)),
-        linear-gradient(90deg, rgba(0,0,0,.70), rgba(0,0,0,.35));
-      color:#fff;
-    }
-    .ctaRow{
-      display:flex; align-items:center; justify-content:space-between; gap:18px;
-    }
-    .ctaRow h2{ margin:0 0 6px; font-size: clamp(22px, 2.4vw, 34px); }
-    .ctaRow p{ margin:0; color: rgba(255,255,255,.86); font-weight:600; }
-    .ctaBtn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 14px 18px; border-radius:999px; font-weight: 900;
-      color:#fff;
-      background: linear-gradient(135deg,var(--gold),var(--gold2));
-      box-shadow: 0 18px 55px rgba(176,141,47,.22);
-      white-space: nowrap;
+        radial-gradient(circle at 10% 50%, rgba(201,162,39,.10), transparent 28%),
+        radial-gradient(circle at 90% 50%, rgba(201,162,39,.10), transparent 28%),
+        #fffaf0;
+      border-top: 1px solid rgba(201,162,39,.17);
     }
 
-    @media (max-width: 980px){
-      .serviceRow, .serviceRow.reverse{ grid-template-columns: 1fr; }
-      .ctaRow{ flex-direction: column; align-items:flex-start; }
+    .sv-cta h2 {
+      max-width: 900px;
+      margin: 18px auto 20px;
+      font-family: var(--sv-serif);
+      font-size: clamp(34px, 4.5vw, 60px);
+      line-height: 1.2;
+    }
+
+    .sv-cta h2 span {
+      color: var(--sv-gold);
+    }
+
+    .sv-cta p {
+      max-width: 610px;
+      margin: 0 auto 32px;
+      color: var(--sv-muted);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .sv-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .sv-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 17px 27px;
+      min-height: 54px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .sv-button:hover {
+      transform: translateY(-4px);
+    }
+
+    .sv-button-primary {
+      background: linear-gradient(135deg, #ae870f, #e6c95e);
+      color: #171205;
+      box-shadow: 0 12px 28px rgba(201,162,39,.22);
+    }
+
+    .sv-button-secondary {
+      border: 1px solid var(--sv-gold);
+      background: #fff;
+      color: var(--sv-gold-dark);
+    }
+
+    /* =====================================
+       SCROLL ANIMATION
+    ===================================== */
+
+    .sv-reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .sv-motion-ready .sv-reveal {
+      opacity: 0;
+      transform: translateY(38px);
+      transition:
+        opacity .85s cubic-bezier(.22,1,.36,1),
+        transform .85s cubic-bezier(.22,1,.36,1);
+      transition-delay: var(--sv-delay, 0ms);
+    }
+
+    .sv-motion-ready .sv-reveal.sv-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =====================================
+       TABLET
+    ===================================== */
+
+    @media (max-width: 1050px) {
+      .sv-grid {
+        gap: 22px;
+      }
+
+      .sv-card-bottom {
+        padding-inline: 20px;
+      }
+
+      .sv-card-top h3 {
+        font-size: 23px;
+      }
+    }
+
+    /* =====================================
+       MOBILE
+    ===================================== */
+
+    @media (max-width: 850px) {
+      .sv-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sv-hero {
+        padding: 85px 22px 70px;
+      }
+
+      .sv-services {
+        padding: 45px 0 90px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .sv-container {
+        width: calc(100% - 38px);
+      }
+
+      .sv-hero {
+        padding: 75px 18px 60px;
+      }
+
+      .sv-hero h1 {
+        font-size: clamp(35px, 9vw, 47px);
+        letter-spacing: -1px;
+      }
+
+      .sv-hero p {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .sv-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+      }
+
+      .sv-eyebrow::before,
+      .sv-eyebrow::after {
+        width: 22px;
+      }
+
+      .sv-section-heading {
+        margin-bottom: 36px;
+      }
+
+      .sv-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .sv-card {
+        min-height: 420px;
+      }
+
+      .sv-card-top {
+        min-height: 190px;
+      }
+
+      .sv-card-bottom {
+        padding: 50px 25px 25px;
+      }
+
+      /* Show details on mobile without hover */
+      .sv-card-details {
+        grid-template-rows: 1fr;
+        opacity: 1;
+      }
+
+      .sv-card-summary {
+        min-height: auto;
+      }
+
+      .sv-cta {
+        padding: 75px 20px;
+      }
+
+      .sv-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .sv-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sv-page *,
+      .sv-page *::before,
+      .sv-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+
+      .sv-motion-ready .sv-reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
 
-<body>
-  <!-- NAVBAR mount -->
+<body id="top">
+
+  <!-- SHARED NAVBAR -->
   <div id="navbarMount"></div>
-  
 
-  <!-- HERO -->
-  <section class="pageHero">
-    <div class="pageHero__bg" aria-hidden="true"></div>
-    <div class="container">
-      <div class="pageHero__inner">
-        <h1 class="pageHero__title">Services</h1>
-        <div class="crumbs">
-          <a href="index.html">Home</a>
-          <span class="sep">›</span>
-          <span>Services</span>
+  <main class="sv-page">
+
+    <!-- =================================
+         HERO
+    ================================= -->
+
+    <section class="sv-hero">
+      <div class="sv-container">
+
+        <span class="sv-eyebrow sv-reveal">
+          WHAT WE OFFER
+        </span>
+
+        <h1 class="sv-reveal">
+          Financial Expertise.
+          <span>Exceptional Service.</span>
+        </h1>
+
+        <p class="sv-reveal">
+          From individual taxes to complete business financial support,
+          we deliver professional solutions designed to bring clarity,
+          confidence and peace of mind.
+        </p>
+
+        <div class="sv-hero-line sv-reveal">
+          <i class="fa-solid fa-diamond"></i>
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES -->
-  <section class="servicesWrap">
-    <div class="container">
+    <!-- =================================
+         SERVICES
+    ================================= -->
 
-      <div class="serviceRow" id="individual">
-        <div class="serviceCardImg">
-          <img src="assests/img/Transfer-Tax-1.jpg" alt="Individual tax support">
-        </div>
-        <div class="serviceCopy">
-          <h2>Individual Taxes</h2>
+    <section class="sv-services" id="services">
+
+      <div class="sv-container">
+
+        <div class="sv-section-heading sv-reveal">
+
+          <span class="sv-eyebrow">OUR EXPERTISE</span>
+
+          <h2>
+            Explore Our <span>Services</span>
+          </h2>
+
           <p>
-            Maximise your returns while staying fully compliant. We simplify filings, handle documentation clearly,
-            and guide you through every requirement.
+            Six essential financial services.
+            One trusted partner for your success.
           </p>
-          <a class="learnMore" href="individual.html">
-            Learn More <span class="dot">→</span>
-          </a>
+
+        </div>
+
+        <div class="sv-grid">
+
+          <!-- SERVICE 01 -->
+          <article class="sv-card sv-reveal" id="individual">
+
+            <div class="sv-card-top">
+
+              <div class="sv-icon">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+              </div>
+
+              <h3>Individual Taxes</h3>
+
+              <span class="sv-card-number">
+                01 / OUR SERVICES
+              </span>
+
+            </div>
+
+            <div class="sv-card-bottom">
+
+              <p class="sv-card-summary">
+                Personalized tax preparation and filing
+                to help you claim eligible deductions
+                and file with confidence.
+              </p>
+
+              <div class="sv-card-details">
+                <div class="sv-card-details-inner">
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Tax preparation</li>
+                    <li><i class="fa-solid fa-check"></i> Credits &amp; deductions</li>
+                    <li><i class="fa-solid fa-check"></i> Filing support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="individual.html" class="sv-card-link">
+                Explore Service
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+          </article>
+
+          <!-- SERVICE 02 -->
+          <article class="sv-card sv-reveal" id="business">
+
+            <div class="sv-card-top">
+
+              <div class="sv-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+
+              <h3>Business Taxes</h3>
+
+              <span class="sv-card-number">
+                02 / OUR SERVICES
+              </span>
+
+            </div>
+
+            <div class="sv-card-bottom">
+
+              <p class="sv-card-summary">
+                Accurate business tax preparation
+                and reporting to help your company
+                stay organized and compliant.
+              </p>
+
+              <div class="sv-card-details">
+                <div class="sv-card-details-inner">
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Business tax filing</li>
+                    <li><i class="fa-solid fa-check"></i> Tax reporting</li>
+                    <li><i class="fa-solid fa-check"></i> Compliance support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="businesstax.html" class="sv-card-link">
+                Explore Service
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+          </article>
+
+          <!-- SERVICE 03 -->
+          <article class="sv-card sv-reveal" id="bookkeeping">
+
+            <div class="sv-card-top">
+
+              <div class="sv-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+
+              <h3>Bookkeeping</h3>
+
+              <span class="sv-card-number">
+                03 / OUR SERVICES
+              </span>
+
+            </div>
+
+            <div class="sv-card-bottom">
+
+              <p class="sv-card-summary">
+                Reliable financial records,
+                monthly reconciliations and
+                clear reports for better decisions.
+              </p>
+
+              <div class="sv-card-details">
+                <div class="sv-card-details-inner">
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Monthly bookkeeping</li>
+                    <li><i class="fa-solid fa-check"></i> Financial statements</li>
+                    <li><i class="fa-solid fa-check"></i> Account reconciliation</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="bookkeeping.html" class="sv-card-link">
+                Explore Service
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+          </article>
+
+          <!-- SERVICE 04 -->
+          <article class="sv-card sv-reveal" id="payroll">
+
+            <div class="sv-card-top">
+
+              <div class="sv-icon">
+                <i class="fa-solid fa-money-check-dollar"></i>
+              </div>
+
+              <h3>Payroll Services</h3>
+
+              <span class="sv-card-number">
+                04 / OUR SERVICES
+              </span>
+
+            </div>
+
+            <div class="sv-card-bottom">
+
+              <p class="sv-card-summary">
+                Streamlined payroll processing
+                with accurate calculations,
+                reporting and dependable support.
+              </p>
+
+              <div class="sv-card-details">
+                <div class="sv-card-details-inner">
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Payroll processing</li>
+                    <li><i class="fa-solid fa-check"></i> Payroll reporting</li>
+                    <li><i class="fa-solid fa-check"></i> Employee records</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="payroll.html" class="sv-card-link">
+                Explore Service
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+          </article>
+
+          <!-- SERVICE 05 -->
+          <article class="sv-card sv-reveal" id="formation">
+
+            <div class="sv-card-top">
+
+              <div class="sv-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+
+              <h3>Business Formation</h3>
+
+              <span class="sv-card-number">
+                05 / OUR SERVICES
+              </span>
+
+            </div>
+
+            <div class="sv-card-bottom">
+
+              <p class="sv-card-summary">
+                Start your business with guidance
+                on entity structure, registration
+                and financial setup.
+              </p>
+
+              <div class="sv-card-details">
+                <div class="sv-card-details-inner">
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> LLC formation guidance</li>
+                    <li><i class="fa-solid fa-check"></i> Entity selection</li>
+                    <li><i class="fa-solid fa-check"></i> Startup tax setup</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="business-formation.html" class="sv-card-link">
+                Explore Service
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+          </article>
+
+          <!-- SERVICE 06 - NEW -->
+          <article class="sv-card sv-reveal" id="tax-planning">
+
+            <div class="sv-card-top">
+
+              <div class="sv-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+
+              <h3>Tax Planning</h3>
+
+              <span class="sv-card-number">
+                06 / OUR SERVICES
+              </span>
+
+            </div>
+
+            <div class="sv-card-bottom">
+
+              <p class="sv-card-summary">
+                Proactive tax strategies designed
+                to identify eligible savings
+                and support long-term financial goals.
+              </p>
+
+              <div class="sv-card-details">
+                <div class="sv-card-details-inner">
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Year-round tax strategy</li>
+                    <li><i class="fa-solid fa-check"></i> Deduction planning</li>
+                    <li><i class="fa-solid fa-check"></i> Tax-saving opportunities</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="tax-planning.html" class="sv-card-link">
+                Discuss Tax Planning
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+            </div>
+          </article>
+
         </div>
       </div>
+    </section>
 
-      <div class="serviceRow reverse" id="business">
-        <div class="serviceCopy">
-          <h2>Business Taxes</h2>
-          <p>
-            Confidently manage business tax obligations with structured planning, accurate reporting,
-            and year-round support to help you stay ahead.
-          </p>
-          <a class="learnMore" href="businesstax.html">
-            Learn More <span class="dot">→</span>
-          </a>
-        </div>
-        <div class="serviceCardImg">
-          <img src="assests/img/bbb.jpg" alt="Business tax planning">
-        </div>
-      </div>
+    <!-- =================================
+     PREMIUM CONSULTATION CTA
+================================= -->
 
-      <div class="serviceRow" id="bookkeeping">
-        <div class="serviceCardImg">
-          <img src="assests/img/ttt.jpg" alt="Bookkeeping services">
-        </div>
-        <div class="serviceCopy">
-          <h2>Bookkeeping</h2>
-          <p>
-            Keep your records organised and up to date. We provide clean monthly reconciliations,
-            accurate categorisation, and clear financial visibility.
-          </p>
-          <a class="learnMore" href="bookkeeping.html">
-            Learn More <span class="dot">→</span>
-          </a>
-        </div>
-      </div>
+<section class="sv-cta">
 
-      <div class="serviceRow reverse" id="payroll">
-        <div class="serviceCopy">
-          <h2>Payroll</h2>
-          <p>
-            Run payroll smoothly with timely processing, proper reporting, and reliable compliance support
-            so your team is paid correctly and on time.
-          </p>
-          <a class="learnMore" href="payroll.html">
-            Learn More <span class="dot">→</span>
-          </a>
-        </div>
-        <div class="serviceCardImg">
-          <img src="assests/img/rf.jpg" alt="Payroll processing">
-        </div>
-      </div>
-      
-      <div class="serviceRow" id="formation">
-        <div class="serviceCardImg">
-          <img src="assests/img/company-formation.png" alt="Business formation support">
-        </div>
-        <div class="serviceCopy">
-          <h2>Business Formation</h2>
-          <p>
-            Starting a business? Get guidance choosing the right structure, setting up basics,
-            and preparing for taxes and bookkeeping from day one.
-          </p>
-          <a class="learnMore" href="business-formation.html">
-            Learn More <span class="dot">→</span>
-          </a>
-        </div>
-      </div>
+  <div class="sv-container">
 
-    </div>
-  </section>
+    <span class="sv-eyebrow sv-reveal">
+      LET'S WORK TOGETHER
+    </span>
 
-  <!-- CTA -->
-  <section class="ctaStrip">
-    <div class="container ctaRow">
-      <div>
-        <h2>Ready to Elevate Your Finances?</h2>
-        <p>Get in touch to start your path to confident tax and bookkeeping support.</p>
-      </div>
-      <a class="ctaBtn" href="contact.html">Schedule An Appointment</a>
-    </div>
-  </section>
-<!-- ================= FOOTER ================= -->
-   <!-- ================= FOOTER ================= -->
-<footer class="pFooter" id="footer">
-  <div class="container pFooter__inner">
+    <h2 class="sv-reveal">
+      Your Financial Goals.<br>
+      <span>Our Commitment.</span>
+    </h2>
 
-    <!-- Brand / Logo + Social (icons BELOW logo) -->
-    <div class="pFooter__brand">
-      <a href="index.html" class="pFooter__logoWrap">
-        <img src="assests/img/llogo.png" alt="Nash Tax & Bookkeeping Logo" class="pFooter__logo">
+    <p class="sv-reveal">
+      Get personalized tax and bookkeeping guidance
+      tailored to your individual or business needs.
+    </p>
+
+    <div class="sv-cta-actions sv-reveal">
+
+      <!-- Schedule Consultation -->
+      <a href="contact.html"
+         class="sv-button sv-button-secondary">
+
+        <i class="fa-regular fa-calendar-check"></i>
+        Schedule a Consultation
+
       </a>
 
-      <div class="pFooter__socialIcons" aria-label="Social media links">
-        <a href="https://www.instagram.com/nash_tax_?stkn=MWk3NzR4aDB4OWI2bA%3D%3D&utm_source=qr"
-           target="_blank" rel="noopener"
+      <!-- Calendly Booking -->
+      <a
+        href="https://calendly.com/tax-nashath/new-meeting"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="sv-button sv-button-primary sv-calendly-btn">
+
+        <i class="fa-solid fa-calendar-days"></i>
+        Book a Calendly Appointment
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+19144134870"
+         class="sv-button sv-button-secondary">
+
+        <i class="fa-solid fa-phone-volume"></i>
+        Talk With Us
+
+      </a>
+
+    </div>
+
+    <div class="sv-cta-note sv-reveal">
+  Personalized Guidance
+  <span>•</span>
+  Convenient Online Booking
+  <span>•</span>
+  Nationwide Support
+</div>
+  </div>
+
+</section>
+
+  </main>
+
+  <!-- FONT AWESOME: Add once inside <head> -->
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- NASH TAX PREMIUM FOOTER -->
+<footer class="pFooter" id="footer">
+  <div class="pFooter__inner">
+
+    <!-- LOGO AND SOCIALS -->
+    <div class="pFooter__brand">
+      <a href="index.html" class="pFooter__logoWrap">
+        <img
+          src="assests/img/llogo.png"
+          alt="Nash Tax & Bookkeeping"
+          class="pFooter__logo"
+        >
+      </a>
+
+      <div class="pFooter__socialIcons">
+        <a href="https://www.instagram.com/nash_tax_/"
+           target="_blank" rel="noopener noreferrer"
            aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a href="https://www.facebook.com/profile.php?id=61588369831428&mibextid=wwXIfr&rdid=trMZPBTIOBIsiyRk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19s48ntWQj%2F%3Fmibextid%3DwwXIfr#"
-           target="_blank" rel="noopener"
+        <a href="https://www.facebook.com/profile.php?id=61588369831428"
+           target="_blank" rel="noopener noreferrer"
            aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="https://wa.me/19144134870?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20tax%20services."
-           target="_blank" rel="noopener"
+        <a href="https://wa.me/19144134870"
+           target="_blank" rel="noopener noreferrer"
            aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
     </div>
 
+    <!-- QUICK LINKS -->
     <div class="pFooter__col">
-      <div class="pFooter__title">Quick Links</div>
+      <h3 class="pFooter__title">Quick Links</h3>
+
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
       <a href="service.html">Services</a>
       <a href="contact.html">Contact</a>
-      <a href="terms.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Privacy</a>
     </div>
 
+    <!-- SERVICES -->
     <div class="pFooter__col">
-      <div class="pFooter__title">What We Do</div>
+      <h3 class="pFooter__title">Our Services</h3>
+
       <a href="individual.html">Individual Tax</a>
       <a href="businesstax.html">Business Tax</a>
       <a href="bookkeeping.html">Bookkeeping</a>
       <a href="payroll.html">Payroll</a>
-      <a href="businessformation.html">Business Formation</a>
+      <a href="business-formation.html">Business Formation</a>
+      <a href="tax-planning.html">Tax Planning</a>
     </div>
 
+    <!-- CONTACT -->
     <div class="pFooter__contact">
-      <div class="pFooter__card">
-        <div class="pFooter__cardTitle">Get In Touch</div>
+      <h3 class="pFooter__title">Contact Us</h3>
 
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <a href="tel:+19144134870">+1 (914) 413 4870</a>
-        </div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-phone"></i>
+        </span>
+        <a href="tel:+19144134870">
+          +1 (914) 413 4870
+        </a>
+      </div>
 
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <a href="mailto:tax@nashtaxes.com">tax@nashtaxes.com</a>
-        </div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-envelope"></i>
+        </span>
+        <a href="mailto:tax@nashtaxes.com">
+          tax@nashtaxes.com
+        </a>
+      </div>
 
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <span>Dallas, TX • Remote-friendly</span>
-        </div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-location-dot"></i>
+        </span>
+        <span>
+          Dallas, TX
+          <small>Remote-friendly</small>
+        </span>
+      </div>
 
-        <a class="pFooter__cta" href="contact.html">Free Consultation</a>
-        <div class="pFooter__note">Reply within business hours (9AM–6PM)</div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-regular fa-clock"></i>
+        </span>
+        <span>
+          Mon – Fri: 9AM – 6PM
+          <small>Eastern Time</small>
+        </span>
       </div>
     </div>
+
+    <!-- NEWSLETTER -->
+    <div class="pFooter__newsletter">
+      <h3 class="pFooter__title">
+        Subscribe for Updates
+      </h3>
+
+      <p>
+        Get tax tips, deadlines and business
+        insights delivered to your inbox.
+      </p>
+
+      <form class="pFooter__subscribe"
+            id="footerSubscribeForm">
+        <label for="footerEmail" class="pFooter__srOnly">
+          Email address
+        </label>
+
+        <input
+          type="email"
+          id="footerEmail"
+          name="email"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        >
+
+        <button type="submit" aria-label="Subscribe">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+      <p class="pFooter__formStatus"
+         id="footerSubscribeStatus"
+         role="status"
+         aria-live="polite"></p>
+    </div>
+
   </div>
 
-  <div class="container pFooter__bottom">
-    <span>© 2025 Nash Tax &amp; Bookkeeping. All rights reserved.</span>
-    <a class="pFooter__top" href="#top">Back to top ↑</a>
+  <!-- BOTTOM -->
+  <div class="pFooter__bottom">
+    <span>
+      © 2026 Nash Tax &amp; Bookkeeping.
+      All rights reserved.
+    </span>
+
+    <div class="pFooter__bottomLinks">
+      <a href="terms.html">Terms of Service</a>
+      <a href="terms.html">Privacy Policy</a>
+      <a href="#top" class="pFooter__top">
+        Back to top ↑
+      </a>
+    </div>
   </div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
 </footer>
 
+  <!-- Existing shared navbar -->
   <script src="assests/js/navbar.js"></script>
+
+  <!-- =================================
+       SERVICES PAGE SCROLL ANIMATIONS
+  ================================= -->
+
+  <script>
+    (() => {
+      const init = () => {
+
+        const elements = document.querySelectorAll(".sv-reveal");
+
+        if (!elements.length) return;
+
+        const reducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        if (reducedMotion || !("IntersectionObserver" in window)) {
+          elements.forEach(el => el.classList.add("sv-visible"));
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries, obs) => {
+
+          entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("sv-visible");
+            obs.unobserve(entry.target);
+
+          });
+
+        }, {
+          threshold: 0.08,
+          rootMargin: "0px 0px -35px 0px"
+        });
+
+        elements.forEach((element, index) => {
+
+          if (element.classList.contains("sv-card")) {
+            const cardIndex = Array.from(
+              element.parentElement.children
+            ).indexOf(element);
+
+            element.style.setProperty(
+              "--sv-delay",
+              `${(cardIndex % 3) * 110}ms`
+            );
+          }
+
+          observer.observe(element);
+        });
+
+        document.documentElement.classList.add("sv-motion-ready");
+
+        // Reveal anything already inside the viewport
+        requestAnimationFrame(() => {
+          elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              element.classList.add("sv-visible");
+              observer.unobserve(element);
+            }
+          });
+        });
+
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+<script src="assests/js/scroll-animation.js" defer></script>
 </body>
 </html>

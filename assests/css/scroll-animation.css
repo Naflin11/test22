@@ -1,0 +1,143 @@
+
+/* ==========================================
+   NASH TAX - PREMIUM GLOBAL SCROLL ANIMATIONS
+========================================== */
+
+/* ===== DEFAULT REVEAL ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 35px, 0);
+
+  transition:
+    opacity 0.85s cubic-bezier(.22, 1, .36, 1),
+    transform 0.85s cubic-bezier(.22, 1, .36, 1);
+
+  will-change: opacity, transform;
+}
+
+/* ===== VISIBLE STATE ===== */
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ===== REVEAL FROM LEFT ===== */
+
+.reveal.reveal-left {
+  transform: translate3d(-45px, 0, 0);
+}
+
+.reveal.reveal-left.is-visible {
+  transform: translate3d(0, 0, 0);
+}
+
+/* ===== REVEAL FROM RIGHT ===== */
+
+.reveal.reveal-right {
+  transform: translate3d(45px, 0, 0);
+}
+
+.reveal.reveal-right.is-visible {
+  transform: translate3d(0, 0, 0);
+}
+
+/* ===== SOFT ZOOM ===== */
+
+.reveal.reveal-zoom {
+  transform: scale(.94);
+}
+
+.reveal.reveal-zoom.is-visible {
+  transform: scale(1);
+}
+
+/* ===== STAGGERED ANIMATIONS ===== */
+
+.reveal-delay-1 {
+  transition-delay: 100ms;
+}
+
+.reveal-delay-2 {
+  transition-delay: 200ms;
+}
+
+.reveal-delay-3 {
+  transition-delay: 300ms;
+}
+
+.reveal-delay-4 {
+  transition-delay: 400ms;
+}
+
+/* ===== PROTECT INTERACTIVE CAROUSEL ===== */
+
+.solutions-stage .solution-card,
+.solutions-stage .solution-card.reveal {
+  transition-delay: 0ms;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 768px) {
+
+  .reveal {
+    transform: translate3d(0, 20px, 0);
+
+    transition:
+      opacity 0.65s ease,
+      transform 0.65s ease;
+  }
+
+  .reveal.reveal-left,
+  .reveal.reveal-right {
+    transform: translate3d(0, 20px, 0);
+  }
+
+  .reveal.reveal-zoom {
+    transform: scale(.97);
+  }
+
+  .reveal.is-visible,
+  .reveal.reveal-left.is-visible,
+  .reveal.reveal-right.is-visible {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .reveal.reveal-zoom.is-visible {
+    transform: scale(1);
+  }
+
+  .reveal-delay-1 {
+    transition-delay: 60ms;
+  }
+
+  .reveal-delay-2 {
+    transition-delay: 120ms;
+  }
+
+  .reveal-delay-3 {
+    transition-delay: 180ms;
+  }
+
+  .reveal-delay-4 {
+    transition-delay: 240ms;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal,
+  .reveal.reveal-left,
+  .reveal.reveal-right,
+  .reveal.reveal-zoom {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0ms !important;
+    will-change: auto !important;
+  }
+}

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Nash Tax & Bookkeeping</title>
   <link rel="icon" type="image/png" href="assests/img/llogo1.png">
+  <link rel="stylesheet" href="assests/css/scroll-animation.css">
 
     <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956738872"></script>
@@ -23,6 +24,7 @@
   <!-- Your global site CSS -->
   <link rel="stylesheet" href="assests/css/style.css">
   <link rel="stylesheet" href="assests/css/navbar.css">
+  <link rel="stylesheet" href="assests/css/footer.css">
 
   <!-- Page CSS -->
   <style>
@@ -506,84 +508,163 @@
     </div>
   </section>
 
-  <!-- Footer mount -->
-     <!-- ================= FOOTER ================= -->
-<footer class="pFooter" id="footer">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
-  <div class="container pFooter__inner">
+<!-- FONT AWESOME: Add once inside <head> -->
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Brand / Logo + Social (icons BELOW logo) -->
+<!-- NASH TAX PREMIUM FOOTER -->
+<footer class="pFooter" id="footer">
+  <div class="pFooter__inner">
+
+    <!-- LOGO AND SOCIALS -->
     <div class="pFooter__brand">
       <a href="index.html" class="pFooter__logoWrap">
-        <img src="assests/img/llogo.png" alt="Nash Tax & Bookkeeping Logo" class="pFooter__logo">
+        <img
+          src="assests/img/llogo.png"
+          alt="Nash Tax & Bookkeeping"
+          class="pFooter__logo"
+        >
       </a>
 
-      <div class="pFooter__socialIcons" aria-label="Social media links">
-        <a href="https://www.instagram.com/nash_tax_?stkn=MWk3NzR4aDB4OWI2bA%3D%3D&utm_source=qr"
-           target="_blank" rel="noopener"
+      <div class="pFooter__socialIcons">
+        <a href="https://www.instagram.com/nash_tax_/"
+           target="_blank" rel="noopener noreferrer"
            aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a href="https://www.facebook.com/profile.php?id=61588369831428&mibextid=wwXIfr&rdid=trMZPBTIOBIsiyRk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19s48ntWQj%2F%3Fmibextid%3DwwXIfr#"
-           target="_blank" rel="noopener"
+        <a href="https://www.facebook.com/profile.php?id=61588369831428"
+           target="_blank" rel="noopener noreferrer"
            aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="https://wa.me/19144134870?text=Hello%20I%20would%20like%20to%20know%20more%20about%20your%20tax%20services."
-           target="_blank" rel="noopener"
+        <a href="https://wa.me/19144134870"
+           target="_blank" rel="noopener noreferrer"
            aria-label="WhatsApp">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
       </div>
     </div>
 
+    <!-- QUICK LINKS -->
     <div class="pFooter__col">
-      <div class="pFooter__title">Quick Links</div>
+      <h3 class="pFooter__title">Quick Links</h3>
+
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
       <a href="service.html">Services</a>
       <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms &amp; Privacy</a>
     </div>
 
+    <!-- SERVICES -->
     <div class="pFooter__col">
-      <div class="pFooter__title">What We Do</div>
+      <h3 class="pFooter__title">Our Services</h3>
+
       <a href="individual.html">Individual Tax</a>
       <a href="businesstax.html">Business Tax</a>
       <a href="bookkeeping.html">Bookkeeping</a>
       <a href="payroll.html">Payroll</a>
-      <a href="businessformation.html">Business Formation</a>
+      <a href="business-formation.html">Business Formation</a>
+      <a href="tax-planning.html">Tax Planning</a>
     </div>
 
+    <!-- CONTACT -->
     <div class="pFooter__contact">
-      <div class="pFooter__card">
-        <div class="pFooter__cardTitle">Get In Touch</div>
+      <h3 class="pFooter__title">Contact Us</h3>
 
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <a href="tel:+19144134870">+1 (914) 413 4870</a>
-        </div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-phone"></i>
+        </span>
+        <a href="tel:+19144134870">
+          +1 (914) 413 4870
+        </a>
+      </div>
 
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <a href="mailto:tax@nashtaxes.com">tax@nashtaxes.com</a>
-        </div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-envelope"></i>
+        </span>
+        <a href="mailto:tax@nashtaxes.com">
+          tax@nashtaxes.com
+        </a>
+      </div>
 
-        <div class="pFooter__item">
-          <span class="pFooter__dot"></span>
-          <span>Dallas, TX • Remote-friendly</span>
-        </div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-solid fa-location-dot"></i>
+        </span>
+        <span>
+          Dallas, TX
+          <small>Remote-friendly</small>
+        </span>
+      </div>
 
-        <a class="pFooter__cta" href="contact.html">Free Consultation</a>
-        <div class="pFooter__note">Reply within business hours (9AM–6PM)</div>
+      <div class="pFooter__contactItem">
+        <span class="pFooter__contactIcon">
+          <i class="fa-regular fa-clock"></i>
+        </span>
+        <span>
+          Mon – Fri: 9AM – 6PM
+          <small>Eastern Time</small>
+        </span>
       </div>
     </div>
+
+    <!-- NEWSLETTER -->
+    <div class="pFooter__newsletter">
+      <h3 class="pFooter__title">
+        Subscribe for Updates
+      </h3>
+
+      <p>
+        Get tax tips, deadlines and business
+        insights delivered to your inbox.
+      </p>
+
+      <form class="pFooter__subscribe"
+            id="footerSubscribeForm">
+        <label for="footerEmail" class="pFooter__srOnly">
+          Email address
+        </label>
+
+        <input
+          type="email"
+          id="footerEmail"
+          name="email"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        >
+
+        <button type="submit" aria-label="Subscribe">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+      <p class="pFooter__formStatus"
+         id="footerSubscribeStatus"
+         role="status"
+         aria-live="polite"></p>
+    </div>
+
   </div>
 
-  <div class="container pFooter__bottom">
-    <span>© 2025 Nash Tax &amp; Bookkeeping. All rights reserved.</span>
-    <a class="pFooter__top" href="#top">Back to top ↑</a>
+  <!-- BOTTOM -->
+  <div class="pFooter__bottom">
+    <span>
+      © 2026 Nash Tax &amp; Bookkeeping.
+      All rights reserved.
+    </span>
+
+    <div class="pFooter__bottomLinks">
+      <a href="terms.html">Terms of Service</a>
+      <a href="terms.html">Privacy Policy</a>
+      <a href="#top" class="pFooter__top">
+        Back to top ↑
+      </a>
+    </div>
   </div>
 </footer>
 
@@ -608,5 +689,6 @@
       });
     })();
   </script>
+  <script src="assests/js/scroll-animation.js" defer></script>
 </body>
 </html>

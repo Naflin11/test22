@@ -96,3 +96,18 @@ async function loadNavbar() {
 }
 
 loadNavbar();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("footerSubscribeForm");
+  const status = document.getElementById("footerSubscribeStatus");
+
+  if (!form || !status) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    status.textContent =
+      "Newsletter subscriptions are coming soon. Please contact us for updates.";
+  });
+});
